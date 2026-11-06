@@ -1,0 +1,11 @@
+# Raw and exported data files (never committed)
+data/
+*.csv
+*.parquet
+
+# Excel temporary lock files
+~$*
+
+# Operating system files
+.DS_Store
+Thumbs.db
