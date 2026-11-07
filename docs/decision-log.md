@@ -126,9 +126,33 @@ Table 3.1: Raw data compared with the clean copy
 | --- | --- |
 | Employees (rows) | 1,470 |
 | Columns in the raw file | 35 |
-| Columns in the clean copy | 32 |
+| Columns in the clean copy (before AttritionFlag) | 32 |
+| Columns in the clean copy (with AttritionFlag) | 33 |
 | Attrition = No (stayed) | 1,233 |
 | Attrition = Yes (left) | 237 |
 | Attrition rate | 16.1% |
 
 Every table in later parts of this project is reconciled back to these totals.
+
+## Part 4: Preparing the clean copy for analysis
+
+### Decision 10: Add an AttritionFlag column
+
+- **Found:** Attrition holds the words Yes and No. A PivotTable can add up or average numbers but not words, so an attrition rate cannot be calculated from the column as it stands.
+- **Decided:** A column named AttritionFlag was added to clean_hr_attrition with a conditional column in Power Query: 1 where Attrition is Yes and 0 where it is No, stored as a whole number. The Attrition column itself was kept.
+- **Why:** The average of a 1 and 0 column is the share of employees who left, so a PivotTable can show the attrition rate for any group directly.
+- **Limit:** The flag holds the same information as Attrition and adds no new facts. The sum of the flag was validated against the raw count of employees who left (Table 4.1).
+
+Table 4.1: Check of the AttritionFlag column
+
+| Measure | Raw | Clean | Difference |
+| --- | --- | --- | --- |
+| Employees who left (Attrition = Yes) | 237 | 237 | 0 |
+
+Table 4.2: Result of the flag
+
+| Group | Employees | Share of employees |
+| --- | --- | --- |
+| AttritionFlag = 1 (left) | 237 | 16.1% |
+| AttritionFlag = 0 (stayed) | 1,233 | 83.9% |
+| Total | 1,470 | 100.0% |
