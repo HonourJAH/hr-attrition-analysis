@@ -92,12 +92,41 @@ Table 2.2: Range checks on coded columns
 - **Why:** A column with only two values, both at the top of the scale, cannot separate weak performers from strong ones. The documented meaning of the full scale fails for this dataset.
 - **Limit:** A comparison between ratings 3 and 4 can still be reported, but it describes a difference between two groups at the upper end of the scale and not a difference between poor and good performance.
 
+## Part 3: Clean copy and validation
+
+### Decision 8: Build the clean copy by removing the constant columns
+
+- **Found:** The typed query holds 35 columns, three of which carry a single value (Decision 4).
+- **Decided:** A third query, clean_hr_attrition, references typed_hr_attrition and removes EmployeeCount, StandardHours and Over18. It is the only query loaded into a worksheet, and every pivot and chart in this project reads from it. The chain is raw_hr_attrition, then typed_hr_attrition, then clean_hr_attrition.
+- **Why:** Keeping each change in its own query means anyone can open a step and see exactly what was changed between the source file and the analysis.
+- **Limit:** The clean copy contains the same 1,470 employees as the raw file. Nothing else was changed, so any problem in the source values, such as the two-level PerformanceRating, carries through.
+
+### Decision 9: Validate the clean copy against the raw data
+
+- **Found:** A separate query, raw_checks, counts employees and adds up Age and MonthlyIncome from the raw data, grouped by Attrition. The same figures were recalculated from the clean table with COUNTIFS and SUMIFS, and compared on a validation sheet.
+- **Decided:** The clean copy is accepted. All seven comparisons match and every difference is 0 (Table 3.1).
+- **Why:** Matching counts show that no employee was dropped. Matching sums show that no age or income value changed.
+- **Limit:** The check covers the row count and the sums of two columns by Attrition group. It does not compare every column. The only change in the clean query is the removal of three columns, so the other columns are unaffected by construction.
+
+Table 3.1: Raw data compared with the clean copy
+
+| Measure | Raw | Clean | Difference |
+| --- | --- | --- | --- |
+| Employees: Total | 1,470 | 1,470 | 0 |
+| Employees: Yes | 237 | 237 | 0 |
+| Employees: No | 1,233 | 1,233 | 0 |
+| Total Age: Yes | 7,965 | 7,965 | 0 |
+| Total Age: No | 46,313 | 46,313 | 0 |
+| Total MonthlyIncome: Yes | 1,134,541 | 1,134,541 | 0 |
+| Total MonthlyIncome: No | 8,424,768 | 8,424,768 | 0 |
+
 ### Baseline totals
 
 | Measure | Value |
 | --- | --- |
 | Employees (rows) | 1,470 |
 | Columns in the raw file | 35 |
+| Columns in the clean copy | 32 |
 | Attrition = No (stayed) | 1,233 |
 | Attrition = Yes (left) | 237 |
 | Attrition rate | 16.1% |
