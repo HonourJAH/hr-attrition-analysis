@@ -128,6 +128,7 @@ Table 3.1: Raw data compared with the clean copy
 | Columns in the raw file | 35 |
 | Columns in the clean copy (before AttritionFlag) | 32 |
 | Columns in the clean copy (with AttritionFlag) | 33 |
+| Columns in the clean copy (with AttritionFlag and label columns) | 40 |
 | Attrition = No (stayed) | 1,233 |
 | Attrition = Yes (left) | 237 |
 | Attrition rate | 16.1% |
@@ -205,3 +206,43 @@ Table 4.6: Check of the satisfaction label columns
 | EnvironmentSatisfactionLevel: rows without a label | 0 | 0 | 0 |
 | JobSatisfactionLevel: rows without a label | 0 | 0 | 0 |
 | RelationshipSatisfactionLevel: rows without a label | 0 | 0 | 0 |
+
+### Decision 13: Add readable labels for WorkLifeBalance, JobInvolvement and PerformanceRating
+
+- **Found:** WorkLifeBalance, JobInvolvement and PerformanceRating are stored as codes from 1 to 4. The dataset documentation gives WorkLifeBalance the labels 1 Bad, 2 Good, 3 Better and 4 Best. It gives JobInvolvement the same scale as the satisfaction columns, and PerformanceRating the labels 1 Low, 2 Good, 3 Excellent and 4 Outstanding.
+- **Decided:** Two lookup tables were created on the lookups sheet: lookup_work_life_balance and lookup_performance_rating. JobInvolvement reuses lookup_satisfaction_scale from Decision 12, so the same labels are held in one place. Three columns were added to the clean table with XLOOKUP: WorkLifeBalanceLevel, JobInvolvementLevel and PerformanceRatingLevel. Any code without a label would show "Not found".
+- **Why:** Labels make every table and chart readable on its own. The performance table lists all four documented codes so that the two codes that never occur are visible (Decision 7).
+- **Limit:** The labels come from the dataset documentation, not from the file, which holds only the codes. The file does not say who gave the ratings or how. The check shows that every employee received a label in all three columns (Tables 4.7 and 4.8). It cannot show that the published meanings are correct.
+
+Table 4.7: Employees by code for WorkLifeBalance and PerformanceRating
+
+| Code | WorkLifeBalance label | Employees | PerformanceRating label | Employees |
+| --- | --- | --- | --- | --- |
+| 1 | Bad | 80 | Low | 0 |
+| 2 | Good | 344 | Good | 0 |
+| 3 | Better | 893 | Excellent | 1,244 |
+| 4 | Best | 153 | Outstanding | 226 |
+| Total | | 1,470 | | 1,470 |
+
+Table 4.8: Check of the label columns
+
+| Measure | Expected | Clean | Difference |
+| --- | --- | --- | --- |
+| WorkLifeBalanceLevel: rows without a label | 0 | 0 | 0 |
+| JobInvolvementLevel: rows without a label | 0 | 0 | 0 |
+| PerformanceRatingLevel: rows without a label | 0 | 0 | 0 |
+
+### Decision 14: Keep JobLevel and StockOptionLevel as numbers
+
+- **Found:** JobLevel (1 to 5) and StockOptionLevel (0 to 3) are coded columns, but the dataset documentation gives no meaning for the codes beyond the level itself.
+- **Decided:** No lookup tables or label columns were created for these two columns. They stay numeric in the clean table.
+- **Why:** A label would have to be invented, and an invented label would look like documented fact. The numbers already carry the order, with a higher number meaning a higher level.
+- **Limit:** A reader of a pivot sees "Job level 3" and cannot tell what a level 3 job is. The findings describe these columns as levels and make no claim about the roles or the stock options behind them.
+
+Table 4.9: Columns in the clean copy
+
+| Stage | Columns |
+| --- | --- |
+| After removing the three constant columns (Decision 8) | 32 |
+| After adding AttritionFlag (Decision 10) | 33 |
+| After adding the seven label columns (Decisions 11 to 13) | 40 |
