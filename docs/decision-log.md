@@ -180,3 +180,28 @@ Table 4.4: Check of the EducationLevel column
 | Measure | Expected | Clean | Difference |
 | --- | --- | --- | --- |
 | Rows without a label | 0 | 0 | 0 |
+
+### Decision 12: Add readable labels for the three satisfaction columns with one shared lookup table
+
+- **Found:** EnvironmentSatisfaction, JobSatisfaction and RelationshipSatisfaction are stored as codes from 1 to 4. The dataset documentation gives all three the same scale: 1 Low, 2 Medium, 3 High and 4 Very High.
+- **Decided:** One lookup table named lookup_satisfaction_scale was created on the lookups sheet, and used by three new columns in the clean table: EnvironmentSatisfactionLevel, JobSatisfactionLevel and RelationshipSatisfactionLevel. Each column is filled with XLOOKUP, and any code without a label would show "Not found".
+- **Why:** The three columns share one scale, so one table keeps the labels consistent. If a label ever needs to change, it changes in one place.
+- **Limit:** The labels come from the dataset documentation, not from the file, which holds only the codes. The ratings are what employees reported about themselves, so a group's average describes what employees said and not their actual conditions. The check shows that every employee received a label in all three columns (Tables 4.5 and 4.6).
+
+Table 4.5: Employees by satisfaction code
+
+| Code | Label | EnvironmentSatisfaction | JobSatisfaction | RelationshipSatisfaction |
+| --- | --- | --- | --- | --- |
+| 1 | Low | 284 | 289 | 276 |
+| 2 | Medium | 287 | 280 | 303 |
+| 3 | High | 453 | 442 | 459 |
+| 4 | Very High | 446 | 459 | 432 |
+| Total | | 1,470 | 1,470 | 1,470 |
+
+Table 4.6: Check of the satisfaction label columns
+
+| Measure | Expected | Clean | Difference |
+| --- | --- | --- | --- |
+| EnvironmentSatisfactionLevel: rows without a label | 0 | 0 | 0 |
+| JobSatisfactionLevel: rows without a label | 0 | 0 | 0 |
+| RelationshipSatisfactionLevel: rows without a label | 0 | 0 | 0 |
