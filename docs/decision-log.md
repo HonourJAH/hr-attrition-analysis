@@ -129,6 +129,7 @@ Table 3.1: Raw data compared with the clean copy
 | Columns in the clean copy (before AttritionFlag) | 32 |
 | Columns in the clean copy (with AttritionFlag) | 33 |
 | Columns in the clean copy (with AttritionFlag and label columns) | 40 |
+| Columns in the clean copy (with AttritionFlag, label columns and band columns) | 43 |
 | Attrition = No (stayed) | 1,233 |
 | Attrition = Yes (left) | 237 |
 | Attrition rate | 16.1% |
@@ -246,3 +247,39 @@ Table 4.9: Columns in the clean copy
 | After removing the three constant columns (Decision 8) | 32 |
 | After adding AttritionFlag (Decision 10) | 33 |
 | After adding the seven label columns (Decisions 11 to 13) | 40 |
+| After adding the three band columns (Decision 15) | 43 |
+
+### Decision 15: Group Age, YearsAtCompany and MonthlyIncome into bands
+
+- **Found:** Age has 43 distinct values, YearsAtCompany has 37 and MonthlyIncome has 1,349 (Table 2.1). A table with one row per value is too spread out to compare groups of employees.
+- **Decided:** Three columns were added to the clean table with conditional columns in Power Query: AgeBand, TenureBand (from YearsAtCompany) and MonthlyIncomeBand. The band edges, set before any attrition rate was looked at, are in Table 4.10. A value outside every band would show "Not banded".
+- **Why:** HR decisions are made about groups such as new joiners or the lowest paid, and not about individual ages or salaries. Fixing the edges before looking at results means they cannot be chosen to fit a pattern.
+- **Limit:** The edges are a choice, and different edges could give different group results. The dataset does not state the currency of MonthlyIncome, so the income bands carry no currency. Some bands may hold fewer than 100 employees. Groups under 100 are flagged and not interpreted. The check shows that every employee fell into a band in all three columns (Table 4.11).
+
+Table 4.10: Band edges
+
+| Column | Band |
+| --- | --- |
+| AgeBand | Under 25 |
+| AgeBand | 25 to 34 |
+| AgeBand | 35 to 44 |
+| AgeBand | 45 to 54 |
+| AgeBand | 55 and over |
+| TenureBand | Under 2 years |
+| TenureBand | 2 to 4 years |
+| TenureBand | 5 to 9 years |
+| TenureBand | 10 to 19 years |
+| TenureBand | 20 years and over |
+| MonthlyIncomeBand | Under 3,000 |
+| MonthlyIncomeBand | 3,000 to 4,999 |
+| MonthlyIncomeBand | 5,000 to 6,999 |
+| MonthlyIncomeBand | 7,000 to 9,999 |
+| MonthlyIncomeBand | 10,000 and over |
+
+Table 4.11: Check of the band columns
+
+| Measure | Expected | Clean | Difference |
+| --- | --- | --- | --- |
+| AgeBand: rows not banded | 0 | 0 | 0 |
+| TenureBand: rows not banded | 0 | 0 | 0 |
+| MonthlyIncomeBand: rows not banded | 0 | 0 | 0 |
