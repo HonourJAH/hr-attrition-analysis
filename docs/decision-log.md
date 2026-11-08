@@ -156,3 +156,27 @@ Table 4.2: Result of the flag
 | AttritionFlag = 1 (left) | 237 | 16.1% |
 | AttritionFlag = 0 (stayed) | 1,233 | 83.9% |
 | Total | 1,470 | 100.0% |
+
+### Decision 11: Add readable labels for Education with a lookup table
+
+- **Found:** Education is stored as a code from 1 to 5. A PivotTable built on the code would show 1, 2, 3, 4 and 5, which a reader cannot interpret without a legend.
+- **Decided:** A lookup table named lookup_education was created on the lookups sheet, pairing each code with its label. A column named EducationLevel was added to the clean table with XLOOKUP, returning the label for each employee. Any code without a label would show "Not found".
+- **Why:** Labels make every table and chart readable on its own, and the lookup table is the single place where the meaning of each code is recorded.
+- **Limit:** The labels come from the description published with the dataset on Kaggle. The file itself contains only the codes, so nothing in the data confirms what each code means. The check shows that every employee received a label and that the counts add up to 1,470 (Tables 4.3 and 4.4). It cannot show that the published meanings are correct.
+
+Table 4.3: Employees by education code
+
+| Code | Label | Employees |
+| --- | --- | --- |
+| 1 | Below College | 170 |
+| 2 | College | 282 |
+| 3 | Bachelor | 572 |
+| 4 | Masters | 398 |
+| 5 | Doctors | 48 |
+| Total | | 1,470 |
+
+Table 4.4: Check of the EducationLevel column
+
+| Measure | Expected | Clean | Difference |
+| --- | --- | --- | --- |
+| Rows without a label | 0 | 0 | 0 |
