@@ -231,3 +231,143 @@ For an HR manager, the first place to look is level 1 as a whole, and then pay w
 - Levels 4 and 5 contain only one income band each, so pay cannot be compared inside them.
 - The data has no date, so it cannot show whether pay or attrition changed over time.
 - The employees are fictional, so the pattern may not match any real organisation.
+
+## Business question 4: How does attrition change with time at the company, and does the pattern hold within department, pay and job level?
+
+### Findings
+
+Shares in the tables are rounded to one decimal place, so a column of shares can add up to 99.9% or 100.1% instead of exactly 100.0%.
+
+Table 4.1: Attrition by time at the company
+
+| Time at the company | Employees | Share of employees | Left | Share of all leavers | Attrition rate |
+| --- | --- | --- | --- | --- | --- |
+| Under 2 years | 215 | 14.6% | 75 | 31.6% | 34.9% |
+| 2 to 4 years | 365 | 24.8% | 66 | 27.8% | 18.1% |
+| 5 to 9 years | 524 | 35.6% | 58 | 24.5% | 11.1% |
+| 10 to 19 years | 273 | 18.6% | 29 | 12.2% | 10.6% |
+| 20 years and over | 93 | 6.3% | 9 | 3.8% | 9.7% |
+| Total | 1,470 | 100.0% | 237 | 100.0% | 16.1% |
+| Of which: under 5 years combined | 580 | 39.5% | 141 | 59.5% | 24.3% |
+
+Table 4.2: Attrition by time at the company within each department
+
+| Time at the company | Department | Employees | Left | Attrition rate |
+| --- | --- | --- | --- | --- |
+| Under 2 years | Human Resources | 5 | 4 | 80.0% |
+| Under 2 years | Research & Development | 149 | 47 | 31.5% |
+| Under 2 years | Sales | 61 | 24 | 39.3% |
+| 2 to 4 years | Human Resources | 20 | 5 | 25.0% |
+| 2 to 4 years | Research & Development | 241 | 32 | 13.3% |
+| 2 to 4 years | Sales | 104 | 29 | 27.9% |
+| 5 to 9 years | Human Resources | 23 | 2 | 8.7% |
+| 5 to 9 years | Research & Development | 341 | 33 | 9.7% |
+| 5 to 9 years | Sales | 160 | 23 | 14.4% |
+| 10 to 19 years | Human Resources | 8 | 0 | 0.0% |
+| 10 to 19 years | Research & Development | 171 | 17 | 9.9% |
+| 10 to 19 years | Sales | 94 | 12 | 12.8% |
+| 20 years and over | Human Resources | 7 | 1 | 14.3% |
+| 20 years and over | Research & Development | 59 | 4 | 6.8% |
+| 20 years and over | Sales | 27 | 4 | 14.8% |
+| Total | | 1,470 | 237 | 16.1% |
+
+Table 4.3: Attrition by time at the company within each monthly income band
+
+| Time at the company | Monthly income band | Employees | Left | Attrition rate |
+| --- | --- | --- | --- | --- |
+| Under 2 years | Under 3,000 | 122 | 56 | 45.9% |
+| Under 2 years | 3,000 to 4,999 | 34 | 9 | 26.5% |
+| Under 2 years | 5,000 to 6,999 | 28 | 5 | 17.9% |
+| Under 2 years | 7,000 to 9,999 | 10 | 3 | 30.0% |
+| Under 2 years | 10,000 and over | 21 | 2 | 9.5% |
+| 2 to 4 years | Under 3,000 | 140 | 33 | 23.6% |
+| 2 to 4 years | 3,000 to 4,999 | 118 | 21 | 17.8% |
+| 2 to 4 years | 5,000 to 6,999 | 47 | 6 | 12.8% |
+| 2 to 4 years | 7,000 to 9,999 | 26 | 3 | 11.5% |
+| 2 to 4 years | 10,000 and over | 34 | 3 | 8.8% |
+| 5 to 9 years | Under 3,000 | 110 | 19 | 17.3% |
+| 5 to 9 years | 3,000 to 4,999 | 139 | 13 | 9.4% |
+| 5 to 9 years | 5,000 to 6,999 | 138 | 13 | 9.4% |
+| 5 to 9 years | 7,000 to 9,999 | 67 | 10 | 14.9% |
+| 5 to 9 years | 10,000 and over | 70 | 3 | 4.3% |
+| 10 to 19 years | Under 3,000 | 22 | 5 | 22.7% |
+| 10 to 19 years | 3,000 to 4,999 | 57 | 7 | 12.3% |
+| 10 to 19 years | 5,000 to 6,999 | 71 | 3 | 4.2% |
+| 10 to 19 years | 7,000 to 9,999 | 49 | 6 | 12.2% |
+| 10 to 19 years | 10,000 and over | 74 | 8 | 10.8% |
+| 20 years and over | Under 3,000 | 1 | 0 | 0.0% |
+| 20 years and over | 3,000 to 4,999 | 6 | 0 | 0.0% |
+| 20 years and over | 5,000 to 6,999 | 2 | 0 | 0.0% |
+| 20 years and over | 7,000 to 9,999 | 2 | 0 | 0.0% |
+| 20 years and over | 10,000 and over | 82 | 9 | 11.0% |
+| Total | | 1,470 | 237 | 16.1% |
+
+Table 4.4: Attrition by time at the company within each job level
+
+| Time at the company | Job level | Employees | Left | Attrition rate |
+| --- | --- | --- | --- | --- |
+| Under 2 years | 1 | 136 | 60 | 44.1% |
+| Under 2 years | 2 | 49 | 9 | 18.4% |
+| Under 2 years | 3 | 18 | 5 | 27.8% |
+| Under 2 years | 4 | 5 | 1 | 20.0% |
+| Under 2 years | 5 | 7 | 0 | 0.0% |
+| 2 to 4 years | 1 | 201 | 46 | 22.9% |
+| 2 to 4 years | 2 | 114 | 16 | 14.0% |
+| 2 to 4 years | 3 | 28 | 4 | 14.3% |
+| 2 to 4 years | 4 | 13 | 0 | 0.0% |
+| 2 to 4 years | 5 | 9 | 0 | 0.0% |
+| 5 to 9 years | 1 | 171 | 30 | 17.5% |
+| 5 to 9 years | 2 | 240 | 18 | 7.5% |
+| 5 to 9 years | 3 | 74 | 9 | 12.2% |
+| 5 to 9 years | 4 | 26 | 0 | 0.0% |
+| 5 to 9 years | 5 | 13 | 1 | 7.7% |
+| 10 to 19 years | 1 | 34 | 7 | 20.6% |
+| 10 to 19 years | 2 | 124 | 9 | 7.3% |
+| 10 to 19 years | 3 | 84 | 11 | 13.1% |
+| 10 to 19 years | 4 | 24 | 2 | 8.3% |
+| 10 to 19 years | 5 | 7 | 0 | 0.0% |
+| 20 years and over | 1 | 1 | 0 | 0.0% |
+| 20 years and over | 2 | 7 | 0 | 0.0% |
+| 20 years and over | 3 | 14 | 3 | 21.4% |
+| 20 years and over | 4 | 38 | 2 | 5.3% |
+| 20 years and over | 5 | 33 | 4 | 12.1% |
+| Total | | 1,470 | 237 | 16.1% |
+
+Table 4.5: Overlap between the first two years, the lowest income band and job level 1
+
+| Group | Employees in the group | All employees in the time band | Share |
+| --- | --- | --- | --- |
+| Under 2 years with a monthly income under 3,000 | 122 | 215 | 56.7% |
+
+| Group | Employees | Share of all employees | Left | Share of all leavers | Attrition rate |
+| --- | --- | --- | --- | --- | --- |
+| Job level 1 with under 2 years at the company | 136 | 9.3% | 60 | 25.3% | 44.1% |
+
+- The attrition rate fell steeply with time at the company: 34.9% for employees with under 2 years, 18.1% at 2 to 4 years and 11.1% at 5 to 9 years. It then levelled off at 10.6% for 10 to 19 years and 9.7% for 20 years and over (Table 4.1).
+- Employees with under 5 years at the company were 39.5% of the workforce (580 employees) but 59.5% of the leavers (141), a combined rate of 24.3% (Table 4.1).
+- The pattern holds in both large departments. Research & Development fell from 31.5% under 2 years to 9.9% at 10 to 19 years, and Sales fell from 39.3% to 12.8% over the same range (Table 4.2).
+- The gap between departments also holds over time. Sales had a higher rate than Research & Development in every time band: 39.3% against 31.5% under 2 years, 27.9% against 13.3% at 2 to 4 years, 14.4% against 9.7% at 5 to 9 years, 12.8% against 9.9% at 10 to 19 years, and 14.8% against 6.8% at 20 years and over (Table 4.2).
+- Human Resources groups are too small to compare. For example, 4 of the 5 Human Resources employees with under 2 years left (Table 4.2).
+- The pay finding from question 3 holds within time at the company. Employees on a monthly income under 3,000 had the highest rate in every time band up to 19 years: 45.9% against 9.5% for 10,000 and over under 2 years, 23.6% against 8.8% at 2 to 4 years, and 17.3% against 4.3% at 5 to 9 years (Table 4.3).
+- Pay and time at the company overlap. Of the 215 employees with under 2 years at the company, 122 (56.7%) were on a monthly income under 3,000 (Table 4.5).
+- In the 20 years and over group, 82 of the 93 employees earned 10,000 or more (11.0% left), so pay cannot be compared within that group (Table 4.3).
+- Job level matters within every time band that has enough employees. Level 1 had the highest rate in the four bands from under 2 years to 19 years: 44.1% under 2 years, 22.9% at 2 to 4 years, 17.5% at 5 to 9 years and 20.6% at 10 to 19 years (Table 4.4).
+- Time at the company matters within job levels. In level 1 the rate fell from 44.1% under 2 years to 22.9% at 2 to 4 years and 17.5% at 5 to 9 years. In level 2 it fell from 18.4% to 14.0%, 7.5% and 7.3% across the first four bands (Table 4.4).
+- The highest-risk group in the data so far is job level 1 employees with under 2 years at the company. They were 136 employees (9.3% of the workforce) and 60 of the 237 leavers (25.3%), a rate of 44.1% (Table 4.5).
+- The 20 years and over group has only 1 employee at level 1, so job levels cannot be compared within it. Several other cells, such as level 4 and level 5 under 2 years (5 and 7 employees), are too small to read (Table 4.4).
+
+### What this means
+
+Attrition is concentrated in the first years at the company, and this is not explained by department, pay or job level alone. The pattern appears in both large departments, inside the lowest-paid group, and within job levels. At the same time, the earlier findings also hold within time at the company: Sales has higher attrition than Research & Development, lower pay goes with higher attrition, and level 1 has higher attrition than other levels.
+
+Taken together, the group most worth an HR manager's attention is new employees in entry-level jobs, particularly those on the lowest pay. The data points to the first two years as the period when most of the leaving happens, which makes onboarding and early-career experience a place to look.
+
+### Limitations
+
+- This is an association. The data does not show why employees left at any stage.
+- Time at the company is recorded in whole years, and the data does not say whether it was counted up to the day each leaver left. A leaver in the under 2 years group therefore had 0 or 1 whole years of service in the data.
+- Age and overtime are not taken into account in this question. Younger employees are likely to have shorter service, and question 2 showed that overtime goes with higher attrition.
+- The time bands were fixed before any attrition rate was looked at (Decision 15), but different band edges could give different group results.
+- Several cells are too small to read, including the Human Resources department, level 4 and level 5 under 2 years, and most of the 20 years and over group.
+- The data has no date, so it cannot show whether attrition in the first years rose or fell over calendar time.
+- The employees are fictional, so the pattern may not match any real organisation.
