@@ -153,3 +153,81 @@ For an HR manager, workload is a direct place to look, starting with the roles w
 - For Human Resources, Manager and Research Director, and for Healthcare Representative with overtime, the groups are too small to compare with confidence.
 - The data has no date, so it cannot show whether the pattern changed over time.
 - The employees are fictional, so the pattern may not match any real organisation.
+
+## Business question 3: Is lower pay linked to higher attrition, and does it still hold within each job level?
+
+### Findings
+
+Shares in the tables are rounded to one decimal place, so a column of shares can add up to 99.9% or 100.1% instead of exactly 100.0%.
+
+Table 3.1: Attrition by monthly income band
+
+| Monthly income band | Employees | Share of employees | Left | Share of all leavers | Attrition rate |
+| --- | --- | --- | --- | --- | --- |
+| Under 3,000 | 395 | 26.9% | 113 | 47.7% | 28.6% |
+| 3,000 to 4,999 | 354 | 24.1% | 50 | 21.1% | 14.1% |
+| 5,000 to 6,999 | 286 | 19.5% | 27 | 11.4% | 9.4% |
+| 7,000 to 9,999 | 154 | 10.5% | 22 | 9.3% | 14.3% |
+| 10,000 and over | 281 | 19.1% | 25 | 10.5% | 8.9% |
+| Total | 1,470 | 100.0% | 237 | 100.0% | 16.1% |
+
+Table 3.2: Attrition by job level
+
+| Job level | Employees | Share of employees | Left | Share of all leavers | Attrition rate |
+| --- | --- | --- | --- | --- | --- |
+| 1 | 543 | 36.9% | 143 | 60.3% | 26.3% |
+| 2 | 534 | 36.3% | 52 | 21.9% | 9.7% |
+| 3 | 218 | 14.8% | 32 | 13.5% | 14.7% |
+| 4 | 106 | 7.2% | 5 | 2.1% | 4.7% |
+| 5 | 69 | 4.7% | 5 | 2.1% | 7.2% |
+| Total | 1,470 | 100.0% | 237 | 100.0% | 16.1% |
+| Of which: levels 2 to 5 combined | 927 | 63.1% | 94 | 39.7% | 10.1% |
+
+Table 3.3: Attrition by monthly income band within each job level
+
+| Job level | Monthly income band | Employees | Left | Attrition rate |
+| --- | --- | --- | --- | --- |
+| 1 | Under 3,000 | 381 | 112 | 29.4% |
+| 1 | 3,000 to 4,999 | 162 | 31 | 19.1% |
+| 2 | Under 3,000 | 14 | 1 | 7.1% |
+| 2 | 3,000 to 4,999 | 192 | 19 | 9.9% |
+| 2 | 5,000 to 6,999 | 284 | 26 | 9.2% |
+| 2 | 7,000 to 9,999 | 44 | 6 | 13.6% |
+| 3 | 5,000 to 6,999 | 2 | 1 | 50.0% |
+| 3 | 7,000 to 9,999 | 110 | 16 | 14.5% |
+| 3 | 10,000 and over | 106 | 15 | 14.2% |
+| 4 | 10,000 and over | 106 | 5 | 4.7% |
+| 5 | 10,000 and over | 69 | 5 | 7.2% |
+| Total | | 1,470 | 237 | 16.1% |
+
+Table 3.4: Where the lowest income band sits
+
+| Measure | Employees or leavers in job level 1 | All employees or leavers in the band | Share in job level 1 |
+| --- | --- | --- | --- |
+| Employees with a monthly income under 3,000 | 381 | 395 | 96.5% |
+| Leavers with a monthly income under 3,000 | 112 | 113 | 99.1% |
+
+- Employees with a monthly income under 3,000 left at 28.6%, against 8.9% for those on 10,000 and over. This band holds 26.9% of the employees but 47.7% of the leavers (Table 3.1).
+- The pattern is not a steady fall as pay rises. The 7,000 to 9,999 band (14.3%) had a higher rate than the 5,000 to 6,999 band (9.4%) (Table 3.1).
+- Job level explains most of the gap. Level 1 holds 36.9% of the employees but 60.3% of the leavers, a rate of 26.3%. Levels 2 to 5 together had a rate of 10.1% (94 leavers among 927 employees) (Table 3.2).
+- The lowest income band is almost entirely level 1: 381 of its 395 employees (96.5%) and 112 of its 113 leavers (99.1%). The 28.6% for this band is therefore mostly a level 1 figure (Table 3.4).
+- Within level 1, pay still goes with attrition. Employees under 3,000 left at 29.4% and those on 3,000 to 4,999 at 19.1%, a gap of 10.3 percentage points. Both groups are large (Table 3.3).
+- In levels 2 and 3, higher pay does not go with lower attrition. In level 2, the 3,000 to 4,999 band left at 9.9% and the 5,000 to 6,999 band at 9.2%. In level 3, the 7,000 to 9,999 band left at 14.5% and the 10,000 and over band at 14.2% (Table 3.3).
+- Levels 4 and 5 each have only one income band (10,000 and over), so pay cannot be compared within them. Their rates are 4.7% and 7.2% (Table 3.3).
+- Two cells are too small to read. Level 2 under 3,000 has 14 employees and 1 leaver, and level 3 at 5,000 to 6,999 has 2 employees and 1 leaver, so the 50.0% for the second one carries no information (Table 3.3).
+
+### What this means
+
+Low pay on its own does not explain the high attrition in the lowest income band. That band is mostly entry-level (level 1) jobs, and level 1 employees left far more often than employees at any other level. Pay matters inside level 1, where the lower-paid group left more often than the higher-paid group, but at levels 2 and 3 the data shows no such difference.
+
+For an HR manager, the first place to look is level 1 as a whole, and then pay within it. Raising pay for the whole company's lowest band would not target the problem as well as looking at what level 1 jobs have in common.
+
+### Limitations
+
+- This is an association. The data does not show that pay caused employees to leave.
+- Monthly income is shown in the dataset's own units. The data does not state the currency, and does not say whether it is before or after tax, or whether it includes bonuses.
+- Time at the company has not yet been taken into account. Pay rises with time at the company, so new joiners may be both lower paid and more likely to leave. Question 4 examines time at the company.
+- The income bands were fixed before any attrition rate was looked at (Decision 15), but different band edges could give different group results.
+- Levels 4 and 5 contain only one income band each, so pay cannot be compared inside them.
+- The data has no date, so it cannot show whether pay or attrition changed over time.
+- The employees are fictional, so the pattern may not match any real organisation.
