@@ -371,3 +371,111 @@ Taken together, the group most worth an HR manager's attention is new employees 
 - Several cells are too small to read, including the Human Resources department, level 4 and level 5 under 2 years, and most of the 20 years and over group.
 - The data has no date, so it cannot show whether attrition in the first years rose or fell over calendar time.
 - The employees are fictional, so the pattern may not match any real organisation.
+
+## Business question 5: How do age and marital status relate to attrition, and does the pattern hold once time at the company is taken into account?
+
+### Findings
+
+Shares in the tables are rounded to one decimal place, so a column of shares can add up to 99.9% or 100.1% instead of exactly 100.0%.
+
+Table 5.1: Attrition by age band
+
+| Age band | Employees | Share of employees | Left | Share of all leavers | Attrition rate |
+| --- | --- | --- | --- | --- | --- |
+| Under 25 | 97 | 6.6% | 38 | 16.0% | 39.2% |
+| 25 to 34 | 554 | 37.7% | 112 | 47.3% | 20.2% |
+| 35 to 44 | 505 | 34.4% | 51 | 21.5% | 10.1% |
+| 45 to 54 | 245 | 16.7% | 25 | 10.5% | 10.2% |
+| 55 and over | 69 | 4.7% | 11 | 4.6% | 15.9% |
+| Total | 1,470 | 100.0% | 237 | 100.0% | 16.1% |
+| Of which: under 35 combined | 651 | 44.3% | 150 | 63.3% | 23.0% |
+| Of which: 35 and over combined | 819 | 55.7% | 87 | 36.7% | 10.6% |
+
+Table 5.2: Attrition by marital status
+
+| Marital status | Employees | Share of employees | Left | Share of all leavers | Attrition rate |
+| --- | --- | --- | --- | --- | --- |
+| Divorced | 327 | 22.2% | 33 | 13.9% | 10.1% |
+| Married | 673 | 45.8% | 84 | 35.4% | 12.5% |
+| Single | 470 | 32.0% | 120 | 50.6% | 25.5% |
+| Total | 1,470 | 100.0% | 237 | 100.0% | 16.1% |
+
+Table 5.3: Attrition by marital status within each age band
+
+| Age band | Marital status | Employees | Left | Attrition rate |
+| --- | --- | --- | --- | --- |
+| Under 25 | Divorced | 11 | 1 | 9.1% |
+| Under 25 | Married | 30 | 9 | 30.0% |
+| Under 25 | Single | 56 | 28 | 50.0% |
+| 25 to 34 | Divorced | 127 | 14 | 11.0% |
+| 25 to 34 | Married | 243 | 39 | 16.0% |
+| 25 to 34 | Single | 184 | 59 | 32.1% |
+| 35 to 44 | Divorced | 119 | 14 | 11.8% |
+| 35 to 44 | Married | 239 | 18 | 7.5% |
+| 35 to 44 | Single | 147 | 19 | 12.9% |
+| 45 to 54 | Divorced | 54 | 3 | 5.6% |
+| 45 to 54 | Married | 127 | 13 | 10.2% |
+| 45 to 54 | Single | 64 | 9 | 14.1% |
+| 55 and over | Divorced | 16 | 1 | 6.3% |
+| 55 and over | Married | 34 | 5 | 14.7% |
+| 55 and over | Single | 19 | 5 | 26.3% |
+| Total | | 1,470 | 237 | 16.1% |
+
+Table 5.4: Attrition by age band within each time at the company band
+
+| Time at the company | Age band | Employees | Left | Attrition rate |
+| --- | --- | --- | --- | --- |
+| Under 2 years | Under 25 | 43 | 26 | 60.5% |
+| Under 2 years | 25 to 34 | 66 | 29 | 43.9% |
+| Under 2 years | 35 to 44 | 75 | 15 | 20.0% |
+| Under 2 years | 45 to 54 | 20 | 3 | 15.0% |
+| Under 2 years | 55 and over | 11 | 2 | 18.2% |
+| 2 to 4 years | Under 25 | 42 | 9 | 21.4% |
+| 2 to 4 years | 25 to 34 | 152 | 39 | 25.7% |
+| 2 to 4 years | 35 to 44 | 100 | 11 | 11.0% |
+| 2 to 4 years | 45 to 54 | 58 | 6 | 10.3% |
+| 2 to 4 years | 55 and over | 13 | 1 | 7.7% |
+| 5 to 9 years | Under 25 | 12 | 3 | 25.0% |
+| 5 to 9 years | 25 to 34 | 230 | 30 | 13.0% |
+| 5 to 9 years | 35 to 44 | 174 | 12 | 6.9% |
+| 5 to 9 years | 45 to 54 | 86 | 10 | 11.6% |
+| 5 to 9 years | 55 and over | 22 | 3 | 13.6% |
+| 10 to 19 years | 25 to 34 | 106 | 14 | 13.2% |
+| 10 to 19 years | 35 to 44 | 109 | 10 | 9.2% |
+| 10 to 19 years | 45 to 54 | 44 | 2 | 4.5% |
+| 10 to 19 years | 55 and over | 14 | 3 | 21.4% |
+| 20 years and over | 35 to 44 | 47 | 3 | 6.4% |
+| 20 years and over | 45 to 54 | 37 | 4 | 10.8% |
+| 20 years and over | 55 and over | 9 | 2 | 22.2% |
+| Total | | 1,470 | 237 | 16.1% |
+
+Table 5.5: Overlap between age and the first two years at the company
+
+| Group | Employees in the group | All employees with under 2 years | Share |
+| --- | --- | --- | --- |
+| Under 35 with under 2 years at the company | 109 | 215 | 50.7% |
+
+- The attrition rate fell with age up to the middle of working life: 39.2% for employees under 25, 20.2% at 25 to 34 and 10.1% at 35 to 44. It stayed at 10.2% for 45 to 54 and was 15.9% for 55 and over, a smaller group of 69 employees (Table 5.1).
+- Employees under 35 were 44.3% of the workforce (651 employees) but 63.3% of the leavers (150), a combined rate of 23.0%. Employees aged 35 and over had a combined rate of 10.6% (87 leavers among 819 employees) (Table 5.1).
+- Single employees left at 25.5%, against 12.5% for married and 10.1% for divorced employees. They were 32.0% of the workforce but 50.6% of the leavers (Table 5.2).
+- Within every age band, single employees had the highest rate. The gap is wide in the younger bands: 50.0% against 30.0% for married employees under 25, and 32.1% against 16.0% at 25 to 34. At 35 to 44 the three groups are close (single 12.9%, divorced 11.8%, married 7.5%). The marital pattern is therefore mostly a pattern among employees under 35 (Table 5.3).
+- The age pattern holds within time at the company. Employees under 35 had higher rates than those aged 35 to 44 in every time band where the comparison can be made: 60.5% (under 25) and 43.9% (25 to 34) against 20.0% under 2 years, 21.4% and 25.7% against 11.0% at 2 to 4 years, 25.0% and 13.0% against 6.9% at 5 to 9 years, and 13.2% (25 to 34) against 9.2% at 10 to 19 years (Table 5.4).
+- Age and time at the company overlap. Of the 215 employees with under 2 years at the company, 109 (50.7%) were under 35, so part of the age pattern is new joiners (Table 5.5).
+- The high rate for employees under 25 (39.2%) is less clear-cut once time at the company is held the same. At 2 to 4 years, those under 25 did not leave more often than those aged 25 to 34 (21.4% against 25.7%) (Table 5.4).
+- Several cells are too small to read: divorced employees under 25 (11 employees), under 25 at 5 to 9 years (12), every time band for 55 and over (9 to 22 employees), and the divorced and single groups at 55 and over (16 and 19) (Tables 5.3 and 5.4).
+
+### What this means
+
+Age and marital status both go with attrition, and they overlap. Employees under 35 and single employees leave more often, and the marital gap is mostly found among the younger employees. Part of the age pattern is new joiners, because half of the employees in their first two years are under 35, but the age pattern also remains when time at the company is held the same.
+
+Age and marital status describe who is leaving. They are not something an employer can change, and they should not be used to select or treat employees differently. The useful reading for an HR manager is about career stage: younger employees, particularly in their first years, are the group where leaving is most common, and support for them early in their career is the place to look.
+
+### Limitations
+
+- This is an association. The data does not show why employees left.
+- Overtime and job level are not taken into account in this question, and either could account for part of the age pattern. Question 2 showed that overtime goes with higher attrition, and question 3 showed that job level 1 has the highest attrition.
+- The data does not say whether age and marital status were recorded at the time each employee left or at another date.
+- The age bands were fixed before any attrition rate was looked at (Decision 15), but different band edges could give different group results.
+- Several cells are too small to read, as listed above, and the 55 and over band has only 69 employees.
+- The data has no date, so it cannot show whether the pattern changed over time.
+- The employees are fictional, so the pattern may not match any real organisation.
