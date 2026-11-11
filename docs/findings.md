@@ -479,3 +479,115 @@ Age and marital status describe who is leaving. They are not something an employ
 - Several cells are too small to read, as listed above, and the 55 and over band has only 69 employees.
 - The data has no date, so it cannot show whether the pattern changed over time.
 - The employees are fictional, so the pattern may not match any real organisation.
+
+## Business question 6: Does a long gap since the last promotion go with higher attrition, once time at the company is taken into account?
+
+### Findings
+
+Shares in the tables are rounded to one decimal place, so a column of shares can add up to 99.9% or 100.1% instead of exactly 100.0%.
+
+Table 6.1: Attrition by years since the last promotion
+
+| Years since last promotion | Employees | Share of employees | Left | Share of all leavers | Attrition rate |
+| --- | --- | --- | --- | --- | --- |
+| 0 years | 581 | 39.5% | 110 | 46.4% | 18.9% |
+| 1 to 2 years | 516 | 35.1% | 76 | 32.1% | 14.7% |
+| 3 to 5 years | 158 | 10.7% | 16 | 6.8% | 10.1% |
+| 6 to 10 years | 149 | 10.1% | 27 | 11.4% | 18.1% |
+| 11 years and over | 66 | 4.5% | 8 | 3.4% | 12.1% |
+| Total | 1,470 | 100.0% | 237 | 100.0% | 16.1% |
+
+Table 6.2: Attrition by years since the last promotion within each time at the company band
+
+| Time at the company | Years since last promotion | Employees | Left | Attrition rate |
+| --- | --- | --- | --- | --- |
+| Under 2 years | 0 years | 202 | 67 | 33.2% |
+| Under 2 years | 1 to 2 years | 13 | 8 | 61.5% |
+| 2 to 4 years | 0 years | 113 | 20 | 17.7% |
+| 2 to 4 years | 1 to 2 years | 246 | 45 | 18.3% |
+| 2 to 4 years | 3 to 5 years | 6 | 1 | 16.7% |
+| 5 to 9 years | 0 years | 205 | 20 | 9.8% |
+| 5 to 9 years | 1 to 2 years | 183 | 17 | 9.3% |
+| 5 to 9 years | 3 to 5 years | 59 | 8 | 13.6% |
+| 5 to 9 years | 6 to 10 years | 77 | 13 | 16.9% |
+| 10 to 19 years | 0 years | 54 | 3 | 5.6% |
+| 10 to 19 years | 1 to 2 years | 58 | 4 | 6.9% |
+| 10 to 19 years | 3 to 5 years | 73 | 6 | 8.2% |
+| 10 to 19 years | 6 to 10 years | 64 | 13 | 20.3% |
+| 10 to 19 years | 11 years and over | 24 | 3 | 12.5% |
+| 20 years and over | 0 years | 7 | 0 | 0.0% |
+| 20 years and over | 1 to 2 years | 16 | 2 | 12.5% |
+| 20 years and over | 3 to 5 years | 20 | 1 | 5.0% |
+| 20 years and over | 6 to 10 years | 8 | 1 | 12.5% |
+| 20 years and over | 11 years and over | 42 | 5 | 11.9% |
+| Total | | 1,470 | 237 | 16.1% |
+
+Table 6.3: Attrition by years since the last promotion within each job level
+
+| Job level | Years since last promotion | Employees | Left | Attrition rate |
+| --- | --- | --- | --- | --- |
+| 1 | 0 years | 260 | 78 | 30.0% |
+| 1 | 1 to 2 years | 222 | 51 | 23.0% |
+| 1 | 3 to 5 years | 33 | 4 | 12.1% |
+| 1 | 6 to 10 years | 26 | 9 | 34.6% |
+| 1 | 11 years and over | 2 | 1 | 50.0% |
+| 2 | 0 years | 214 | 22 | 10.3% |
+| 2 | 1 to 2 years | 189 | 17 | 9.0% |
+| 2 | 3 to 5 years | 60 | 3 | 5.0% |
+| 2 | 6 to 10 years | 63 | 10 | 15.9% |
+| 2 | 11 years and over | 8 | 0 | 0.0% |
+| 3 | 0 years | 69 | 9 | 13.0% |
+| 3 | 1 to 2 years | 56 | 6 | 10.7% |
+| 3 | 3 to 5 years | 37 | 8 | 21.6% |
+| 3 | 6 to 10 years | 40 | 7 | 17.5% |
+| 3 | 11 years and over | 16 | 2 | 12.5% |
+| 4 | 0 years | 23 | 1 | 4.3% |
+| 4 | 1 to 2 years | 28 | 0 | 0.0% |
+| 4 | 3 to 5 years | 17 | 1 | 5.9% |
+| 4 | 6 to 10 years | 13 | 0 | 0.0% |
+| 4 | 11 years and over | 25 | 3 | 12.0% |
+| 5 | 0 years | 15 | 0 | 0.0% |
+| 5 | 1 to 2 years | 21 | 2 | 9.5% |
+| 5 | 3 to 5 years | 11 | 0 | 0.0% |
+| 5 | 6 to 10 years | 7 | 1 | 14.3% |
+| 5 | 11 years and over | 15 | 2 | 13.3% |
+| Total | | 1,470 | 237 | 16.1% |
+
+Table 6.4: Employees with 5 or more years at the company, by years since the last promotion
+
+| Group | Employees | Left | Attrition rate |
+| --- | --- | --- | --- |
+| 6 to 10 years since the last promotion | 149 | 27 | 18.1% |
+| All other promotion gap bands | 741 | 69 | 9.3% |
+| Total employees with 5 or more years at the company | 890 | 96 | 10.8% |
+
+Table 6.5: Overlap between a promotion gap of 0 years and the first two years at the company
+
+| Group | Employees in the group | All employees with under 2 years | Share |
+| --- | --- | --- | --- |
+| Under 2 years at the company with 0 years since the last promotion | 202 | 215 | 94.0% |
+
+- The attrition rate did not rise steadily with the gap since the last promotion. It was highest at 0 years (18.9%), lowest at 3 to 5 years (10.1%), and high again at 6 to 10 years (18.1%) (Table 6.1).
+- The 0 years group is mostly new joiners. Of the 215 employees with under 2 years at the company, 202 (94.0%) are in it, so its high overall rate largely repeats the finding of question 4. Among employees with 5 to 9 and 10 to 19 years at the company, the 0 years group had some of the lowest rates (9.8% and 5.6%) (Tables 6.2 and 6.5).
+- Among long-serving employees, a gap of 6 to 10 years went with a higher rate. Within 5 to 9 years at the company, the rate was 9.8% at 0 years, 9.3% at 1 to 2 years, 13.6% at 3 to 5 years and 16.9% at 6 to 10 years. Within 10 to 19 years it was 5.6%, 6.9% and 8.2% for the first three bands, then 20.3% at 6 to 10 years (Table 6.2).
+- For employees with 5 or more years at the company, the 6 to 10 years group left at 18.1% (27 of 149), against 9.3% (69 of 741) for all other gap bands (Table 6.4).
+- Within 2 to 4 years at the company, there was no pattern: 17.7% at 0 years and 18.3% at 1 to 2 years (Table 6.2).
+- The 6 to 10 years pattern partly holds within job level. In level 1 the rate was 34.6% against 26.3% for the level as a whole, and in level 2 it was 15.9% against 9.7% (Tables 6.3 and 3.2). In level 3 the 3 to 5 years group (21.6%) was higher than the 6 to 10 years group (17.5%) (Table 6.3).
+- Several cells are too small to read: 1 to 2 years among employees with under 2 years at the company (13 employees, 61.5%), 11 years and over in level 1 (2 employees, 50.0%), most of the 20 years and over group, and most of levels 4 and 5 (Tables 6.2 and 6.3).
+
+### What this means
+
+There is no steady link between the time since the last promotion and attrition. The two groups with the highest rates for different reasons: employees with a gap of 0 years are mostly new joiners, whose rate repeats the first-years pattern of question 4, while those with a gap of 6 to 10 years are long-serving employees who left at about twice the rate of their long-serving colleagues with other gaps.
+
+For an HR manager, the second group is the one to look at: employees who have been at the company 5 or more years and have not been promoted for 6 to 10 years. It is a moderate pattern based on groups of about 60 to 80 employees in each tenure band, and it does not apply to the workforce as a whole.
+
+### Limitations
+
+- This is an association. The data does not show whether a lack of promotion caused employees to leave, or whether the employees who were not promoted differed in other ways.
+- A value of 0 years since the last promotion could mean a promotion in the last year or no promotion at all, and the data does not say which.
+- Overtime and pay are not taken into account in this question.
+- The promotion gap bands were fixed before any attrition rate was looked at (Decision 16), but different band edges could give different group results.
+- Long gaps occur only among employees who have been at the company a long time, so the comparison within a time band covers only a narrow range of gaps.
+- Several cells are too small to read, as listed above.
+- The data has no date, so it cannot show whether the pattern changed over time.
+- The employees are fictional, so the pattern may not match any real organisation.

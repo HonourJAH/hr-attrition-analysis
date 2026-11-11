@@ -130,6 +130,7 @@ Table 3.1: Raw data compared with the clean copy
 | Columns in the clean copy (with AttritionFlag) | 33 |
 | Columns in the clean copy (with AttritionFlag and label columns) | 40 |
 | Columns in the clean copy (with AttritionFlag, label columns and band columns) | 43 |
+| Columns in the clean copy (with AttritionFlag, label columns, band columns and PromotionGapBand) | 44 |
 | Attrition = No (stayed) | 1,233 |
 | Attrition = Yes (left) | 237 |
 | Attrition rate | 16.1% |
@@ -248,6 +249,7 @@ Table 4.9: Columns in the clean copy
 | After adding AttritionFlag (Decision 10) | 33 |
 | After adding the seven label columns (Decisions 11 to 13) | 40 |
 | After adding the three band columns (Decision 15) | 43 |
+| After adding PromotionGapBand (Decision 16) | 44 |
 
 ### Decision 15: Group Age, YearsAtCompany and MonthlyIncome into bands
 
@@ -283,3 +285,27 @@ Table 4.11: Check of the band columns
 | AgeBand: rows not banded | 0 | 0 | 0 |
 | TenureBand: rows not banded | 0 | 0 | 0 |
 | MonthlyIncomeBand: rows not banded | 0 | 0 | 0 |
+
+### Decision 16: Group YearsSinceLastPromotion into a promotion gap band
+
+- **Found:** YearsSinceLastPromotion has 16 distinct values, from 0 to 15 (Table 2.1). A table with one row per value is too spread out to compare groups of employees.
+- **Decided:** A column named PromotionGapBand was added to the clean table with a conditional column in Power Query. The band edges, set before any attrition rate was looked at, are in Table 4.12. A value outside every band would show "Not banded".
+- **Why:** Bands let the findings compare groups such as employees promoted recently and employees who have waited many years. Fixing the edges before looking at results means they cannot be chosen to fit a pattern.
+- **Limit:** The edges are a choice, and different edges could give different group results. A value of 0 could mean promoted within the last year or never promoted, and the data does not say which. The documented meaning was checked against the data: no employee has a promotion gap longer than their time at the company (Table 4.13).
+
+Table 4.12: Band edges for PromotionGapBand
+
+| Band | Years since last promotion |
+| --- | --- |
+| 0 years | 0 |
+| 1 to 2 years | 1 to 2 |
+| 3 to 5 years | 3 to 5 |
+| 6 to 10 years | 6 to 10 |
+| 11 years and over | 11 or more |
+
+Table 4.13: Checks of the PromotionGapBand column
+
+| Measure | Expected | Clean | Difference |
+| --- | --- | --- | --- |
+| PromotionGapBand: rows not banded | 0 | 0 | 0 |
+| Rows where the promotion gap is longer than the years at the company | 0 | 0 | 0 |
