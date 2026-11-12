@@ -131,6 +131,7 @@ Table 3.1: Raw data compared with the clean copy
 | Columns in the clean copy (with AttritionFlag and label columns) | 40 |
 | Columns in the clean copy (with AttritionFlag, label columns and band columns) | 43 |
 | Columns in the clean copy (with AttritionFlag, label columns, band columns and PromotionGapBand) | 44 |
+| Columns in the clean copy (with AttritionFlag, label columns, band columns, PromotionGapBand and DistanceBand) | 45 |
 | Attrition = No (stayed) | 1,233 |
 | Attrition = Yes (left) | 237 |
 | Attrition rate | 16.1% |
@@ -250,6 +251,7 @@ Table 4.9: Columns in the clean copy
 | After adding the seven label columns (Decisions 11 to 13) | 40 |
 | After adding the three band columns (Decision 15) | 43 |
 | After adding PromotionGapBand (Decision 16) | 44 |
+| After adding DistanceBand (Decision 17) | 45 |
 
 ### Decision 15: Group Age, YearsAtCompany and MonthlyIncome into bands
 
@@ -309,3 +311,26 @@ Table 4.13: Checks of the PromotionGapBand column
 | --- | --- | --- | --- |
 | PromotionGapBand: rows not banded | 0 | 0 | 0 |
 | Rows where the promotion gap is longer than the years at the company | 0 | 0 | 0 |
+
+### Decision 17: Group DistanceFromHome into a distance band
+
+- **Found:** DistanceFromHome has 29 distinct values, from 1 to 29 (Table 2.1). A table with one row per value is too spread out to compare groups of employees.
+- **Decided:** A column named DistanceBand was added to the clean table with a conditional column in Power Query. The band edges, set before any attrition rate was looked at, are in Table 4.14. A value outside every band would show "Not banded".
+- **Why:** Bands let the findings compare employees who live close to work with those who live far away. Fixing the edges before looking at results means they cannot be chosen to fit a pattern.
+- **Limit:** The edges are a choice, and different edges could give different group results. The dataset does not state the unit of distance (kilometres or miles), so the bands carry no unit. The check shows that every employee fell into a band (Table 4.15).
+
+Table 4.14: Band edges for DistanceBand
+
+| Band | DistanceFromHome |
+| --- | --- |
+| 1 to 2 | 1 to 2 |
+| 3 to 5 | 3 to 5 |
+| 6 to 10 | 6 to 10 |
+| 11 to 20 | 11 to 20 |
+| 21 and over | 21 or more |
+
+Table 4.15: Check of the DistanceBand column
+
+| Measure | Expected | Clean | Difference |
+| --- | --- | --- | --- |
+| DistanceBand: rows not banded | 0 | 0 | 0 |

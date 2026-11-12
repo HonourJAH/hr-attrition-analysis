@@ -591,3 +591,129 @@ For an HR manager, the second group is the one to look at: employees who have be
 - Several cells are too small to read, as listed above.
 - The data has no date, so it cannot show whether the pattern changed over time.
 - The employees are fictional, so the pattern may not match any real organisation.
+
+## Business question 7: Do business travel and distance from home go with higher attrition, and does this hold once overtime and department are taken into account?
+
+### Findings
+
+Shares in the tables are rounded to one decimal place, so a column of shares can add up to 99.9% or 100.1% instead of exactly 100.0%. The business travel groups use the dataset's own labels: Non-Travel (no business travel), Travel_Rarely and Travel_Frequently. The data does not say how many days a year each group travels, and it does not state the unit of distance from home.
+
+Table 7.1: Attrition by business travel
+
+| Business travel | Employees | Share of employees | Left | Share of all leavers | Attrition rate |
+| --- | --- | --- | --- | --- | --- |
+| Non-Travel | 150 | 10.2% | 12 | 5.1% | 8.0% |
+| Travel_Rarely | 1,043 | 71.0% | 156 | 65.8% | 15.0% |
+| Travel_Frequently | 277 | 18.8% | 69 | 29.1% | 24.9% |
+| Total | 1,470 | 100.0% | 237 | 100.0% | 16.1% |
+
+Table 7.2: Attrition by distance from home
+
+| Distance from home | Employees | Share of employees | Left | Share of all leavers | Attrition rate |
+| --- | --- | --- | --- | --- | --- |
+| 1 to 2 | 419 | 28.5% | 54 | 22.8% | 12.9% |
+| 3 to 5 | 213 | 14.5% | 33 | 13.9% | 15.5% |
+| 6 to 10 | 394 | 26.8% | 57 | 24.1% | 14.5% |
+| 11 to 20 | 240 | 16.3% | 48 | 20.3% | 20.0% |
+| 21 and over | 204 | 13.9% | 45 | 19.0% | 22.1% |
+| Total | 1,470 | 100.0% | 237 | 100.0% | 16.1% |
+| Of which: 11 and over combined | 444 | 30.2% | 93 | 39.2% | 20.9% |
+| Of which: 1 to 10 combined | 1,026 | 69.8% | 144 | 60.8% | 14.0% |
+
+Table 7.3: Attrition by business travel within each overtime group
+
+| Overtime | Business travel | Employees | Left | Attrition rate |
+| --- | --- | --- | --- | --- |
+| No | Non-Travel | 115 | 5 | 4.3% |
+| No | Travel_Rarely | 748 | 72 | 9.6% |
+| No | Travel_Frequently | 191 | 33 | 17.3% |
+| Yes | Non-Travel | 35 | 7 | 20.0% |
+| Yes | Travel_Rarely | 295 | 84 | 28.5% |
+| Yes | Travel_Frequently | 86 | 36 | 41.9% |
+| Total | | 1,470 | 237 | 16.1% |
+
+Table 7.4: Share of employees working overtime, by business travel
+
+| Business travel | Employees | Employees working overtime | Share working overtime |
+| --- | --- | --- | --- |
+| Non-Travel | 150 | 35 | 23.3% |
+| Travel_Rarely | 1,043 | 295 | 28.3% |
+| Travel_Frequently | 277 | 86 | 31.0% |
+| Total | 1,470 | 416 | 28.3% |
+
+Table 7.5: Attrition by business travel within each department
+
+| Department | Business travel | Employees | Left | Attrition rate |
+| --- | --- | --- | --- | --- |
+| Human Resources | Non-Travel | 6 | 0 | 0.0% |
+| Human Resources | Travel_Rarely | 46 | 8 | 17.4% |
+| Human Resources | Travel_Frequently | 11 | 4 | 36.4% |
+| Research & Development | Non-Travel | 97 | 8 | 8.2% |
+| Research & Development | Travel_Rarely | 682 | 88 | 12.9% |
+| Research & Development | Travel_Frequently | 182 | 37 | 20.3% |
+| Sales | Non-Travel | 47 | 4 | 8.5% |
+| Sales | Travel_Rarely | 315 | 60 | 19.0% |
+| Sales | Travel_Frequently | 84 | 28 | 33.3% |
+| Total | | 1,470 | 237 | 16.1% |
+
+Table 7.6: Share of employees who travel frequently, by department
+
+| Department | Employees | Employees who travel frequently | Share |
+| --- | --- | --- | --- |
+| Human Resources | 63 | 11 | 17.5% |
+| Research & Development | 961 | 182 | 18.9% |
+| Sales | 446 | 84 | 18.8% |
+| Total | 1,470 | 277 | 18.8% |
+
+Table 7.7: Attrition by distance from home within each overtime group
+
+| Overtime | Distance from home | Employees | Left | Attrition rate |
+| --- | --- | --- | --- | --- |
+| No | 1 to 2 | 313 | 28 | 8.9% |
+| No | 3 to 5 | 147 | 13 | 8.8% |
+| No | 6 to 10 | 287 | 31 | 10.8% |
+| No | 11 to 20 | 164 | 19 | 11.6% |
+| No | 21 and over | 143 | 19 | 13.3% |
+| Yes | 1 to 2 | 106 | 26 | 24.5% |
+| Yes | 3 to 5 | 66 | 20 | 30.3% |
+| Yes | 6 to 10 | 107 | 26 | 24.3% |
+| Yes | 11 to 20 | 76 | 29 | 38.2% |
+| Yes | 21 and over | 61 | 26 | 42.6% |
+| Total | | 1,470 | 237 | 16.1% |
+
+Table 7.8: Attrition by near and far distance within each overtime group
+
+| Overtime | Distance from home | Employees | Left | Attrition rate |
+| --- | --- | --- | --- | --- |
+| No | 1 to 10 | 747 | 72 | 9.6% |
+| No | 11 and over | 307 | 38 | 12.4% |
+| Yes | 1 to 10 | 279 | 72 | 25.8% |
+| Yes | 11 and over | 137 | 55 | 40.1% |
+| Total | | 1,470 | 237 | 16.1% |
+
+- The attrition rate rose with business travel: 8.0% for employees who do not travel, 15.0% for those who travel rarely and 24.9% for those who travel frequently. Frequent travellers were 18.8% of the workforce but 29.1% of the leavers (Table 7.1).
+- The travel pattern holds within overtime. In both overtime groups the rate rose with travel: 4.3%, 9.6% and 17.3% without overtime, and 20.0%, 28.5% and 41.9% with overtime (Table 7.3).
+- Overtime does not explain the travel pattern. Overtime was somewhat more common among frequent travellers (31.0%) than among those who do not travel (23.3%), but the difference is small compared with the gap in attrition (Table 7.4).
+- The travel pattern holds within departments. Frequent travellers had a higher rate than rare travellers in Research & Development (20.3% against 12.9%) and Sales (33.3% against 19.0%) (Table 7.5).
+- Department does not explain the travel pattern either. About the same share of each department travels frequently: 17.5% in Human Resources, 18.9% in Research & Development and 18.8% in Sales (Table 7.6).
+- The two factors add up. The highest rates in this question were among employees who travel frequently and work overtime (41.9%, 86 employees) and among employees who live 21 or more from work and work overtime (42.6%, 61 employees) (Tables 7.3 and 7.7).
+- Distance from home is a weaker pattern. The rate was 12.9% at 1 to 2, 15.5% at 3 to 5 and 14.5% at 6 to 10, then 20.0% at 11 to 20 and 22.1% at 21 and over. It does not rise at every step, but employees living 11 or more from work (30.2% of the workforce) were 39.2% of the leavers, with a rate of 20.9% against 14.0% for those living closer (Table 7.2).
+- The distance pattern holds within overtime. Employees living 11 or more from work left more often than those living closer in both groups: 12.4% against 9.6% without overtime, and 40.1% against 25.8% with overtime. The distance gap is wider among employees who work overtime (Table 7.8). Within the overtime group the rate does not rise at every step (24.5%, 30.3% and 24.3% for the three nearest bands) (Table 7.7).
+- The Human Resources travel groups are too small to compare (6 employees do not travel and 11 travel frequently). The 35 employees who do not travel and work overtime are also a small group, so the exact rate of 20.0% is uncertain, but it is well above the 4.3% for non-travellers without overtime (Tables 7.3 and 7.5).
+
+### What this means
+
+Frequent business travel is clearly linked to higher attrition, and the link does not come from overtime or department. Living far from work is also linked to higher attrition, but the pattern is weaker and less regular. Both are most visible among employees who also work overtime, where the rates are the highest in this question.
+
+For an HR manager, frequent travellers and employees with a long journey to work who also work overtime are the groups where the combined workload is greatest. The data suggests that travel and distance are worth reviewing together with overtime, and not separately.
+
+### Limitations
+
+- These are associations. The data does not show why employees left.
+- The data does not say how many days a year employees travel for business, so the labels Rarely and Frequently have no exact meaning here.
+- The data does not state the unit of distance from home (kilometres or miles).
+- Job level, age and pay are not taken into account in this question. Frequent travel may be more common in some job levels than others.
+- The distance bands were fixed before any attrition rate was looked at (Decision 17), but different band edges could give different group results.
+- A few groups are too small to read, as listed above.
+- The data has no date, so it cannot show whether the pattern changed over time.
+- The employees are fictional, so the pattern may not match any real organisation.
