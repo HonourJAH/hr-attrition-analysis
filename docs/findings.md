@@ -717,3 +717,98 @@ For an HR manager, frequent travellers and employees with a long journey to work
 - A few groups are too small to read, as listed above.
 - The data has no date, so it cannot show whether the pattern changed over time.
 - The employees are fictional, so the pattern may not match any real organisation.
+
+## Business question 8: Which of the five rating scales shows the biggest gap in attrition between low and high ratings, and does it hold within overtime?
+
+### Findings
+
+The five scales are what employees said about themselves. Four use the ratings Low, Medium, High and Very High (environment satisfaction, job satisfaction, relationship satisfaction and job involvement), and work-life balance uses Bad, Good, Better and Best. For each scale, the gap is the attrition rate for the lowest rating minus the rate for the two highest ratings combined. The two highest are combined because several single ratings are small groups. This measure was fixed before any rate was looked at. Gaps are calculated from unrounded rates, so a gap can differ by 0.1 from the difference of the rounded rates shown. Shares in the tables are rounded to one decimal place.
+
+Table 8.1: Attrition by rating on each scale, overall and by overtime
+
+| Scale | Rating | Employees | Left | Attrition rate | Employees without overtime | Left | Attrition rate | Employees with overtime | Left | Attrition rate |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Environment satisfaction | Low | 284 | 72 | 25.4% | 222 | 40 | 18.0% | 62 | 32 | 51.6% |
+| Environment satisfaction | Medium | 287 | 43 | 15.0% | 206 | 16 | 7.8% | 81 | 27 | 33.3% |
+| Environment satisfaction | High | 453 | 62 | 13.7% | 320 | 32 | 10.0% | 133 | 30 | 22.6% |
+| Environment satisfaction | Very High | 446 | 60 | 13.5% | 306 | 22 | 7.2% | 140 | 38 | 27.1% |
+| Job satisfaction | Low | 289 | 66 | 22.8% | 205 | 36 | 17.6% | 84 | 30 | 35.7% |
+| Job satisfaction | Medium | 280 | 46 | 16.4% | 211 | 20 | 9.5% | 69 | 26 | 37.7% |
+| Job satisfaction | High | 442 | 73 | 16.5% | 321 | 32 | 10.0% | 121 | 41 | 33.9% |
+| Job satisfaction | Very High | 459 | 52 | 11.3% | 317 | 22 | 6.9% | 142 | 30 | 21.1% |
+| Relationship satisfaction | Low | 276 | 57 | 20.7% | 210 | 32 | 15.2% | 66 | 25 | 37.9% |
+| Relationship satisfaction | Medium | 303 | 45 | 14.9% | 217 | 15 | 6.9% | 86 | 30 | 34.9% |
+| Relationship satisfaction | High | 459 | 71 | 15.5% | 328 | 37 | 11.3% | 131 | 34 | 26.0% |
+| Relationship satisfaction | Very High | 432 | 64 | 14.8% | 299 | 26 | 8.7% | 133 | 38 | 28.6% |
+| Work-life balance | Bad | 80 | 25 | 31.3% | 58 | 15 | 25.9% | 22 | 10 | 45.5% |
+| Work-life balance | Good | 344 | 58 | 16.9% | 240 | 26 | 10.8% | 104 | 32 | 30.8% |
+| Work-life balance | Better | 893 | 127 | 14.2% | 639 | 54 | 8.5% | 254 | 73 | 28.7% |
+| Work-life balance | Best | 153 | 27 | 17.6% | 117 | 15 | 12.8% | 36 | 12 | 33.3% |
+| Job involvement | Low | 83 | 28 | 33.7% | 58 | 15 | 25.9% | 25 | 13 | 52.0% |
+| Job involvement | Medium | 375 | 71 | 18.9% | 270 | 33 | 12.2% | 105 | 38 | 36.2% |
+| Job involvement | High | 868 | 125 | 14.4% | 623 | 56 | 9.0% | 245 | 69 | 28.2% |
+| Job involvement | Very High | 144 | 13 | 9.0% | 103 | 6 | 5.8% | 41 | 7 | 17.1% |
+| Total (each scale) | | 1,470 | 237 | 16.1% | 1,054 | 110 | 10.4% | 416 | 127 | 30.5% |
+
+Table 8.2: The gap between the lowest rating and the two highest ratings combined, by scale
+
+| Rank | Scale | Lowest rating | Employees | Share of employees | Share of all leavers | Attrition rate | Employees with the two highest ratings | Attrition rate | Gap (percentage points) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | Job involvement | Low | 83 | 5.6% | 11.8% | 33.7% | 1,012 | 13.6% | 20.1 |
+| 2 | Work-life balance | Bad | 80 | 5.4% | 10.5% | 31.3% | 1,046 | 14.7% | 16.5 |
+| 3 | Environment satisfaction | Low | 284 | 19.3% | 30.4% | 25.4% | 899 | 13.6% | 11.8 |
+| 4 | Job satisfaction | Low | 289 | 19.7% | 27.8% | 22.8% | 901 | 13.9% | 9.0 |
+| 5 | Relationship satisfaction | Low | 276 | 18.8% | 24.1% | 20.7% | 891 | 15.2% | 5.5 |
+
+Table 8.3: The gap within each overtime group
+
+| Scale | Overtime | Employees with the lowest rating | Attrition rate | Employees with the two highest ratings | Attrition rate | Gap (percentage points) |
+| --- | --- | --- | --- | --- | --- | --- |
+| Job involvement | No | 58 | 25.9% | 726 | 8.5% | 17.3 |
+| Job involvement | Yes | 25 | 52.0% | 286 | 26.6% | 25.4 |
+| Work-life balance | No | 58 | 25.9% | 756 | 9.1% | 16.7 |
+| Work-life balance | Yes | 22 | 45.5% | 290 | 29.3% | 16.1 |
+| Environment satisfaction | No | 222 | 18.0% | 626 | 8.6% | 9.4 |
+| Environment satisfaction | Yes | 62 | 51.6% | 273 | 24.9% | 26.7 |
+| Job satisfaction | No | 205 | 17.6% | 638 | 8.5% | 9.1 |
+| Job satisfaction | Yes | 84 | 35.7% | 263 | 27.0% | 8.7 |
+| Relationship satisfaction | No | 210 | 15.2% | 627 | 10.0% | 5.2 |
+| Relationship satisfaction | Yes | 66 | 37.9% | 264 | 27.3% | 10.6 |
+
+Table 8.4: Share of employees working overtime among those who gave the lowest rating
+
+| Scale | Lowest rating | Employees | Employees working overtime | Share working overtime |
+| --- | --- | --- | --- | --- |
+| Environment satisfaction | Low | 284 | 62 | 21.8% |
+| Job satisfaction | Low | 289 | 84 | 29.1% |
+| Relationship satisfaction | Low | 276 | 66 | 23.9% |
+| Work-life balance | Bad | 80 | 22 | 27.5% |
+| Job involvement | Low | 83 | 25 | 30.1% |
+| Total (all employees) | | 1,470 | 416 | 28.3% |
+
+- On every scale, employees who gave the lowest rating left more often than those who gave the two highest ratings. The gaps, from widest to narrowest, were job involvement (33.7% against 13.6%, a gap of 20.1 percentage points), work-life balance (31.3% against 14.7%, 16.5), environment satisfaction (25.4% against 13.6%, 11.8), job satisfaction (22.8% against 13.9%, 9.0) and relationship satisfaction (20.7% against 15.2%, 5.5) (Table 8.2).
+- Job involvement is the only scale where the rate fell at every step from the lowest rating to the highest in all three views: overall (33.7%, 18.9%, 14.4%, 9.0%), without overtime (25.9%, 12.2%, 9.0%, 5.8%) and with overtime (52.0%, 36.2%, 28.2%, 17.1%) (Table 8.1).
+- On the other scales the pattern is mostly a difference between the lowest rating and the rest. Environment satisfaction also fell at every step overall (25.4%, 15.0%, 13.7%, 13.5%), but not within the overtime groups. Work-life balance Best (17.6%) was higher than Better (14.2%), and in job satisfaction and relationship satisfaction the High rating (16.5% and 15.5%) was higher than Medium (16.4% and 14.9%) (Table 8.1).
+- The two scales with the widest gaps describe small groups. Employees who gave the lowest rating for job involvement or work-life balance were 5.6% and 5.4% of the workforce and 11.8% and 10.5% of the leavers. On the other three scales the lowest-rating group was about 19% of the workforce and 24.1% to 30.4% of the leavers (Table 8.2).
+- The gap holds within overtime. On all five scales, the lowest rating had a higher rate than the two highest ratings combined, both without and with overtime. Job involvement stayed the widest without overtime (17.3 points) and was also the widest with overtime (25.4 points) apart from environment satisfaction (26.7) (Table 8.3).
+- The gaps for environment satisfaction and relationship satisfaction were wider among employees who work overtime (26.7 and 10.6 points) than among those who do not (9.4 and 5.2). The job satisfaction and work-life balance gaps were similar in both groups (9.1 and 8.7, and 16.7 and 16.1) (Table 8.3).
+- Overtime does not explain the pattern. Among employees who gave the lowest rating, the share working overtime ranged from 21.8% to 30.1%, around the 28.3% for all employees, and it was lower than average on three of the five scales (Table 8.4).
+- There is one exception within an overtime group. Among employees working overtime, job satisfaction Medium (37.7%) was higher than Low (35.7%) (Table 8.1).
+- The lowest ratings with overtime are small groups: 22 employees for work-life balance Bad and 25 for job involvement Low. Their exact rates (45.5% and 52.0%) are uncertain, but both are well above every other rate in their scale, and the direction is the same as in the larger groups (Tables 8.1 and 8.3).
+
+### What this means
+
+All five scales point the same way: an employee who rates their experience lowest is more likely to leave than one who rates it highly. Job involvement and work-life balance show the strongest link, and job involvement is the clearest because its rate falls at each step. These two ratings identify small groups with a high risk. Most leavers did not give the lowest rating on them, so they are a warning sign and not a full picture of who leaves.
+
+For an HR manager, a low job involvement or work-life balance rating is the strongest of the five survey signals to follow up. The three satisfaction scales identify larger groups, but the gap in attrition is smaller.
+
+### Limitations
+
+- These are associations. The data does not show why employees left, and a low rating may reflect a decision to leave that had already been made.
+- The ratings are what employees said about themselves. The data does not say when each rating was given, so it cannot show whether it came before the decision to leave.
+- Job level, pay and time at the company are not taken into account in this question.
+- The five scales are not independent. The same employees may give low ratings on several of them, and this question does not test that.
+- Some groups are small, as noted above, and the lowest rating on work-life balance and job involvement covers only 80 and 83 employees.
+- The ratings come from the dataset documentation as codes. The labels were not recorded in the file itself (Decisions 12 and 13).
+- The data has no date, so it cannot show whether the pattern changed over time.
+- The employees are fictional, so the pattern may not match any real organisation.

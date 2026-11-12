@@ -334,3 +334,18 @@ Table 4.15: Check of the DistanceBand column
 | Measure | Expected | Clean | Difference |
 | --- | --- | --- | --- |
 | DistanceBand: rows not banded | 0 | 0 | 0 |
+
+### Decision 18: Check that each label matches its code
+
+- **Found:** The checks in Decisions 11 to 13 and 15 to 17 confirmed that every employee received a label or band. They did not confirm that the label was the right one for the employee's code.
+- **Decided:** Three further checks were added to the validation sheet for Education, JobInvolvement and PerformanceRating. Each converts the label back to its code with a reverse XLOOKUP and counts the rows where the code does not match the original. All three counts are 0 (Table 4.16).
+- **Why:** A label column that points at the wrong code still shows no errors, so only a check against the original code can catch it.
+- **Limit:** The reverse lookup shows that the labels in these three columns are consistent with the lookup tables. It does not show that the lookup tables themselves are correct, which comes from the dataset documentation. The other label columns (EnvironmentSatisfactionLevel, JobSatisfactionLevel, RelationshipSatisfactionLevel and WorkLifeBalanceLevel) were not checked this way. Their group sizes in the pivots agree with the counts in the lookup tables (Tables 4.3, 4.5 and 4.7).
+
+Table 4.16: Label against code checks
+
+| Measure | Expected | Clean | Difference |
+| --- | --- | --- | --- |
+| EducationLevel: rows where the label does not match the code | 0 | 0 | 0 |
+| JobInvolvementLevel: rows where the label does not match the code | 0 | 0 | 0 |
+| PerformanceRatingLevel: rows where the label does not match the code | 0 | 0 | 0 |
