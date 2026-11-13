@@ -133,6 +133,7 @@ Table 3.1: Raw data compared with the clean copy
 | Columns in the clean copy (with AttritionFlag, label columns, band columns and PromotionGapBand) | 44 |
 | Columns in the clean copy (with AttritionFlag, label columns, band columns, PromotionGapBand and DistanceBand) | 45 |
 | Columns in the clean copy (with AttritionFlag, label columns, band columns, PromotionGapBand, DistanceBand and SalaryHikeBand) | 46 |
+| Columns in the clean copy (with AttritionFlag, label columns, band columns, PromotionGapBand, DistanceBand, SalaryHikeBand, RiskFactorCount and RiskFactorCombination) | 48 |
 | Attrition = No (stayed) | 1,233 |
 | Attrition = Yes (left) | 237 |
 | Attrition rate | 16.1% |
@@ -254,6 +255,7 @@ Table 4.9: Columns in the clean copy
 | After adding PromotionGapBand (Decision 16) | 44 |
 | After adding DistanceBand (Decision 17) | 45 |
 | After adding SalaryHikeBand (Decision 19) | 46 |
+| After adding RiskFactorCount and RiskFactorCombination (Decision 21) | 48 |
 
 ### Decision 15: Group Age, YearsAtCompany and MonthlyIncome into bands
 
@@ -398,3 +400,49 @@ Table 4.20: Salary hike band by performance rating (employees)
 | 18 to 20 | 165 | 55 | 220 |
 | 21 to 25 | 0 | 171 | 171 |
 | Total | 1,244 | 226 | 1,470 |
+
+### Decision 21: Count five risk factors and label each combination
+
+- **Found:** Business questions 2, 3, 4, 7 and 8 each found a factor with a clear pattern that held in its checks. Each question looked at one factor at a time, so none of them shows what happens when the factors occur together.
+- **Decided:** Two columns were added to the clean table with custom columns in Power Query. RiskFactorCount holds the number of the five risk factors an employee has (0 to 5), and RiskFactorCombination holds a text label of the exact combination, such as "Overtime + Level 1", or "None". The five factors are listed in Table 4.21. Age and marital status were left out, because question 5 treats them as descriptions of who leaves and not as something an employer can act on. Distance from home, work-life balance, promotion gap, salary increase, performance rating and training were left out because their patterns were weaker or absent. Combinations with fewer than 30 employees are shown but not ranked.
+- **Why:** A count and a label let the findings compare groups that have none, one or several risk factors, and let a manager see which combinations carry the most leavers. A minimum of 30 employees is used for ranking because one leaver changes the rate of a group of 30 by about 3 percentage points, and a ranking by rate alone would put groups of one or two employees first.
+- **Limit:** The five factors were chosen from patterns found in this same data, so the rise in the attrition rate with the number of factors is built in and overstates how well the count would work for any other group of employees. The count gives each factor equal weight, and the factors overlap (for example, many employees in their first two years are also at job level 1). The 30-employee limit is a choice. The query uses the code JobInvolvement = 1 and not the label, because the label columns are Excel formulas outside the query. The checks are in Table 4.22.
+
+Table 4.21: The five risk factors
+
+| Risk factor | Defined as | Source question | Employees | Left | Attrition rate |
+| --- | --- | --- | --- | --- | --- |
+| Overtime | OverTime = Yes | 2 | 416 | 127 | 30.5% |
+| Job level 1 | JobLevel = 1 | 3 | 543 | 143 | 26.3% |
+| Under 2 years at the company | TenureBand = Under 2 years | 4 | 215 | 75 | 34.9% |
+| Frequent travel | BusinessTravel = Travel_Frequently | 7 | 277 | 69 | 24.9% |
+| Low job involvement | JobInvolvement = 1 | 8 | 83 | 28 | 33.7% |
+| Total risk factors across all employees | | | 1,534 | | |
+
+Table 4.22: Checks of the risk factor columns
+
+| Measure | Expected | Clean | Difference |
+| --- | --- | --- | --- |
+| Sum of RiskFactorCount across all employees | 1,534 | 1,534 | 0 |
+| Rows labelled None compared with rows with a count of 0 | 469 | 469 | 0 |
+| Employees across the six risk factor counts | 1,470 | 1,470 | 0 |
+| Leavers across the six risk factor counts | 237 | 237 | 0 |
+| Employees across the 30 combinations | 1,470 | 1,470 | 0 |
+| Leavers across the 30 combinations | 237 | 237 | 0 |
+
+### Decision 22: Build the dashboard from pivots and slicers on separate sheets
+
+- **Found:** Business questions 1 to 9 each answer one question with their own pivots. A manager cannot combine them without asking an analyst.
+- **Decided:** Two sheets were added to the workbook. The dashboard_data sheet holds five pivots (time at the company, number of risk factors, job role, overtime, and the headline figures). The attrition_dashboard sheet holds four PivotCharts, the three headline figures (employees, leavers and attrition rate), and five slicers: Department, JobLevel, OverTime, BusinessTravel and TenureBand. Every slicer is connected to all five pivots. A note under the headline figures says that rates for groups of fewer than 30 employees are unreliable.
+- **Why:** Slicers let a manager select a group and see every chart and the headline figures change together. The note puts the same size warning used in the ranking next to the rates.
+- **Limit:** The charts show rates and not counts, and the dashboard does not hide groups under 30 employees, so only the headline Employees figure shows how large a selected group is. A bar can rest on very few employees. For example, with JobLevel 1 selected, the 20 years and over bar reads 0.0% and rests on one employee. The checks are in Table 4.23.
+
+Table 4.23: Dashboard checks, with the slicer setting and the headline figures
+
+| Slicer setting | Employees | Left | Attrition rate | Matches |
+| --- | --- | --- | --- | --- |
+| No slicer selected | 1,470 | 237 | 16.1% | Baseline totals |
+| OverTime = Yes | 416 | 127 | 30.5% | Table 2.1 |
+| Department = Sales | 446 | 92 | 20.6% | Table 1.1 |
+| JobLevel = 1 | 543 | 143 | 26.3% | Table 3.2 |
+| TenureBand = Under 2 years | 215 | 75 | 34.9% | Table 4.1 |

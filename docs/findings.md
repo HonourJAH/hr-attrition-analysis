@@ -940,3 +940,135 @@ This does not show that raising pay or training would make no difference. It sho
 - Several groups are small, as noted above.
 - The data has no date, so it cannot show whether the pattern changed over time.
 - The employees are fictional, so the pattern may not match any real organisation.
+
+## Business question 10: Which combination of factors has the highest attrition, and can a manager explore it on one page?
+
+### Findings
+
+This question combines five risk factors that each showed a clear pattern in earlier questions and that an employer can act on: overtime, job level 1, under 2 years at the company, frequent business travel and low job involvement (Decision 21). Age and marital status are not included, because they describe who leaves and are not something an employer can change. Combinations of fewer than 30 employees are shown but not ranked, because one leaver changes the rate of a group of 30 by about 3 percentage points. Shares in the tables are rounded to one decimal place, so a column of shares can add up to 99.9% or 100.1% instead of exactly 100.0%.
+
+Table 10.1: The five risk factors
+
+| Risk factor | Defined as | Employees | Left | Attrition rate | Question |
+| --- | --- | --- | --- | --- | --- |
+| Overtime | Works overtime | 416 | 127 | 30.5% | 2 |
+| Job level 1 | Job level 1 | 543 | 143 | 26.3% | 3 |
+| Under 2 years | Under 2 years at the company | 215 | 75 | 34.9% | 4 |
+| Frequent travel | Travels frequently for business | 277 | 69 | 24.9% | 7 |
+| Low involvement | Lowest job involvement rating | 83 | 28 | 33.7% | 8 |
+| Total risk factors across all employees | | 1,534 | | | |
+
+Table 10.2: Attrition by the number of risk factors
+
+| Number of risk factors | Employees | Share of employees | Left | Share of all leavers | Attrition rate |
+| --- | --- | --- | --- | --- | --- |
+| 0 | 469 | 31.9% | 26 | 11.0% | 5.5% |
+| 1 | 587 | 39.9% | 61 | 25.7% | 10.4% |
+| 2 | 314 | 21.4% | 85 | 35.9% | 27.1% |
+| 3 | 82 | 5.6% | 50 | 21.1% | 61.0% |
+| 4 | 17 | 1.2% | 14 | 5.9% | 82.4% |
+| 5 | 1 | 0.1% | 1 | 0.4% | 100.0% |
+| Total | 1,470 | 100.1% | 237 | 100.0% | 16.1% |
+| Of which: 0 or 1 risk factors | 1,056 | 71.8% | 87 | 36.7% | 8.2% |
+| Of which: 2 or more risk factors | 414 | 28.2% | 150 | 63.3% | 36.2% |
+| Of which: 3 or more risk factors | 100 | 6.8% | 65 | 27.4% | 65.0% |
+
+Table 10.3: Combinations of at least 30 employees, ranked by attrition rate
+
+| Rank | Combination | Employees | Share of employees | Left | Share of all leavers | Attrition rate |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | Overtime + Level 1 | 80 | 5.4% | 31 | 13.1% | 38.8% |
+| 2 | Level 1 + Under 2 years | 78 | 5.3% | 18 | 7.6% | 23.1% |
+| 3 | Overtime + Frequent travel | 42 | 2.9% | 8 | 3.4% | 19.0% |
+| 4 | Level 1 + Frequent travel | 50 | 3.4% | 9 | 3.8% | 18.0% |
+| 5 | Overtime | 179 | 12.2% | 25 | 10.5% | 14.0% |
+| 6 | Level 1 | 230 | 15.6% | 20 | 8.4% | 8.7% |
+| 7 | Frequent travel | 111 | 7.6% | 9 | 3.8% | 8.1% |
+| 8 | Under 2 years | 40 | 2.7% | 3 | 1.3% | 7.5% |
+| 9 | None | 469 | 31.9% | 26 | 11.0% | 5.5% |
+
+Table 10.4: Combinations of fewer than 30 employees, shown but not ranked
+
+| Combination | Employees | Left | Attrition rate |
+| --- | --- | --- | --- |
+| Overtime + Level 1 + Under 2 years + Frequent travel + Low involvement | 1 | 1 | 100.0% |
+| Overtime + Level 1 + Frequent travel + Low involvement | 1 | 1 | 100.0% |
+| Level 1 + Under 2 years + Frequent travel + Low involvement | 2 | 2 | 100.0% |
+| Overtime + Level 1 + Low involvement | 6 | 5 | 83.3% |
+| Overtime + Level 1 + Under 2 years + Frequent travel | 12 | 10 | 83.3% |
+| Level 1 + Under 2 years + Frequent travel | 9 | 7 | 77.8% |
+| Level 1 + Under 2 years + Low involvement | 3 | 2 | 66.7% |
+| Overtime + Level 1 + Under 2 years | 29 | 19 | 65.5% |
+| Overtime + Level 1 + Frequent travel | 25 | 14 | 56.0% |
+| Overtime + Level 1 + Under 2 years + Low involvement | 2 | 1 | 50.0% |
+| Overtime + Frequent travel + Low involvement | 2 | 1 | 50.0% |
+| Under 2 years + Low involvement | 5 | 2 | 40.0% |
+| Overtime + Low involvement | 12 | 4 | 33.3% |
+| Overtime + Under 2 years + Frequent travel | 3 | 1 | 33.3% |
+| Under 2 years + Frequent travel | 9 | 3 | 33.3% |
+| Frequent travel + Low involvement | 6 | 2 | 33.3% |
+| Overtime + Under 2 years | 21 | 6 | 28.6% |
+| Level 1 + Frequent travel + Low involvement | 4 | 1 | 25.0% |
+| Level 1 + Low involvement | 11 | 2 | 18.2% |
+| Low involvement | 27 | 4 | 14.8% |
+| Overtime + Under 2 years + Low involvement | 1 | 0 | 0.0% |
+| Total | 191 | 88 | 46.1% |
+
+Table 10.5: Combinations ranked and not ranked, compared
+
+| Group | Employees | Share of employees | Left | Share of all leavers | Attrition rate |
+| --- | --- | --- | --- | --- | --- |
+| Combinations of at least 30 employees (Table 10.3) | 1,279 | 87.0% | 149 | 62.9% | 11.6% |
+| Combinations of fewer than 30 employees (Table 10.4) | 191 | 13.0% | 88 | 37.1% | 46.1% |
+| Total | 1,470 | 100.0% | 237 | 100.0% | 16.1% |
+
+Table 10.6: Job level 1 by overtime
+
+| Group | Employees | Share of employees | Left | Share of all leavers | Attrition rate |
+| --- | --- | --- | --- | --- | --- |
+| Level 1 with overtime | 156 | 10.6% | 82 | 34.6% | 52.6% |
+| Level 1 without overtime | 387 | 26.3% | 61 | 25.7% | 15.8% |
+| Level 1 total | 543 | 36.9% | 143 | 60.3% | 26.3% |
+
+The row for level 1 with overtime is the sum of the eight combinations in Tables 10.3 and 10.4 that contain both factors (80, 29, 25, 12, 6, 2, 1 and 1 employees, and 31, 19, 14, 10, 5, 1, 1 and 1 leavers). The row without overtime is the level 1 total minus that row.
+
+Table 10.7: Dashboard checks, with the slicer setting and the headline figures
+
+| Slicer setting | Employees | Left | Attrition rate | Matches |
+| --- | --- | --- | --- | --- |
+| No slicer selected | 1,470 | 237 | 16.1% | Baseline totals |
+| OverTime = Yes | 416 | 127 | 30.5% | Table 2.1 |
+| Department = Sales | 446 | 92 | 20.6% | Table 1.1 |
+| JobLevel = 1 | 543 | 143 | 26.3% | Table 3.2 |
+| TenureBand = Under 2 years | 215 | 75 | 34.9% | Table 4.1 |
+
+- The attrition rate rose with the number of risk factors. Employees with none left at 5.5% (469 employees), those with one at 10.4%, with two at 27.1%, with three at 61.0%, and with four at 82.4% (17 employees). The one employee with five factors left (Table 10.2).
+- The rise is not steady. The rate more than doubled from one risk factor to two (10.4% to 27.1%) and from two to three (27.1% to 61.0%), and rose by a smaller proportion at the other steps (5.5% to 10.4%, and 61.0% to 82.4%) (Table 10.2).
+- Employees with two or more risk factors were 28.2% of the workforce (414 employees) but 63.3% of the leavers (150), a rate of 36.2%. Employees with three or more were 6.8% of the workforce (100) and 27.4% of the leavers (65), a rate of 65.0% (Table 10.2).
+- Among the combinations of at least 30 employees, the highest rate was for employees who work overtime and are at job level 1: 38.8%, 31 of 80 employees. This group was 5.4% of the workforce and 13.1% of the leavers (Table 10.3).
+- The factors stack. Overtime alone went with a rate of 14.0% (179 employees) and job level 1 alone with 8.7% (230 employees), but the two together went with 38.8% (Table 10.3).
+- The next combinations were job level 1 with under 2 years at the company (23.1%, 78 employees), overtime with frequent travel (19.0%, 42 employees) and job level 1 with frequent travel (18.0%, 50 employees) (Table 10.3).
+- Within job level 1, overtime goes with a much higher rate. Employees at level 1 who work overtime (156 employees) left at 52.6%, against 15.8% for those at level 1 who do not (387 employees). They were 10.6% of the workforce and 34.6% of the leavers (Table 10.6).
+- The ranking leaves out most of the highest rates. Combinations of fewer than 30 employees were 13.0% of the workforce (191 employees) but 37.1% of the leavers (88), a rate of 46.1% (Table 10.5).
+- The largest of these is overtime with level 1 and under 2 years at the company: 19 of 29 employees left (65.5%). It is one employee short of the ranking limit (Table 10.4).
+- Several other combinations had very high rates, such as 10 of 12 for overtime, level 1, under 2 years and frequent travel (83.3%). These groups are too small to rank, and the exact rates are uncertain (Table 10.4).
+- The dashboard lets a manager select a department, job level, overtime, business travel or time at the company, and see the headline figures and four charts change together. The headline figures match the earlier tables for every setting that was tested (Table 10.7).
+
+### What this means
+
+The first nine questions looked at one factor at a time. This question shows that the factors add up. Most employees have none or one of the five risk factors and left at a low rate (8.2%). A smaller group with two or more risk factors accounts for most of the leavers, and the rate rises steeply with each additional factor.
+
+For an HR manager, the clearest place to look first is employees at job level 1 who work overtime. They are about one in ten employees and one in three leavers. Combinations that include the first two years at the company, frequent travel or low job involvement are smaller, but several of them have very high rates, and the manager should treat any group with two or more risk factors as one to watch.
+
+The dashboard is for exploring, not for ranking. It shows rates for any group a manager selects, and the manager should read the headline employee count first.
+
+### Limitations
+
+- These are associations. The data does not show why employees left, and it does not show what would happen if a factor were changed.
+- The five risk factors were chosen from patterns found earlier in this same data, so the steep rise in the rate with the number of factors is built in. It overstates how well the count would work for a different group of employees, and the combination analysis is a summary of this dataset and not a prediction.
+- The count gives each factor equal weight, although the factors differ in strength and overlap. For example, many employees in their first two years are also at job level 1.
+- The limit of 30 employees for ranking is a choice. Combinations just below it, such as overtime with level 1 and under 2 years (29 employees), would rank high if the limit were lower.
+- Age, marital status, distance from home, work-life balance, promotion gap, salary increase, performance rating and training are not part of the count (Decision 21).
+- The dashboard shows rates and not counts, and it does not hide groups of fewer than 30 employees. A bar can rest on very few employees, so the employee count in the headline should be read first (Decision 22).
+- The data has no date, so it cannot show whether the pattern changed over time.
+- The employees are fictional, so the pattern may not match any real organisation.
