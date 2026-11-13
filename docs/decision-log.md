@@ -132,6 +132,7 @@ Table 3.1: Raw data compared with the clean copy
 | Columns in the clean copy (with AttritionFlag, label columns and band columns) | 43 |
 | Columns in the clean copy (with AttritionFlag, label columns, band columns and PromotionGapBand) | 44 |
 | Columns in the clean copy (with AttritionFlag, label columns, band columns, PromotionGapBand and DistanceBand) | 45 |
+| Columns in the clean copy (with AttritionFlag, label columns, band columns, PromotionGapBand, DistanceBand and SalaryHikeBand) | 46 |
 | Attrition = No (stayed) | 1,233 |
 | Attrition = Yes (left) | 237 |
 | Attrition rate | 16.1% |
@@ -252,6 +253,7 @@ Table 4.9: Columns in the clean copy
 | After adding the three band columns (Decision 15) | 43 |
 | After adding PromotionGapBand (Decision 16) | 44 |
 | After adding DistanceBand (Decision 17) | 45 |
+| After adding SalaryHikeBand (Decision 19) | 46 |
 
 ### Decision 15: Group Age, YearsAtCompany and MonthlyIncome into bands
 
@@ -349,3 +351,50 @@ Table 4.16: Label against code checks
 | EducationLevel: rows where the label does not match the code | 0 | 0 | 0 |
 | JobInvolvementLevel: rows where the label does not match the code | 0 | 0 | 0 |
 | PerformanceRatingLevel: rows where the label does not match the code | 0 | 0 | 0 |
+
+### Decision 19: Group PercentSalaryHike into a salary hike band and use TrainingTimesLastYear as it is
+
+- **Found:** PercentSalaryHike has 15 distinct values, from 11 to 25 (Table 2.1), which is too spread out to compare groups of employees. TrainingTimesLastYear was not included in the range checks in Decision 6. Its minimum is 0 and its maximum is 6, with 7 distinct values (Table 4.19).
+- **Decided:** A column named SalaryHikeBand was added to the clean table with a conditional column in Power Query. The band edges, set before any attrition rate was looked at, are in Table 4.17. A value outside every band would show "Not banded". TrainingTimesLastYear is used as it is, because 7 values are few enough to compare directly.
+- **Why:** Bands let the findings compare employees who received small and large salary increases. Fixing the edges before looking at results means they cannot be chosen to fit a pattern.
+- **Limit:** The edges are a choice, and different edges could give different group results. The check shows that every employee fell into a band (Table 4.18). The range of TrainingTimesLastYear is plausible, but the data does not say what kind of training was counted.
+
+Table 4.17: Band edges for SalaryHikeBand
+
+| Band | PercentSalaryHike |
+| --- | --- |
+| 11 to 12 | 11 to 12 |
+| 13 to 14 | 13 to 14 |
+| 15 to 17 | 15 to 17 |
+| 18 to 20 | 18 to 20 |
+| 21 to 25 | 21 to 25 |
+
+Table 4.18: Check of the SalaryHikeBand column
+
+| Measure | Expected | Clean | Difference |
+| --- | --- | --- | --- |
+| SalaryHikeBand: rows not banded | 0 | 0 | 0 |
+
+Table 4.19: Range check on TrainingTimesLastYear
+
+| Column | Minimum | Maximum | Distinct values |
+| --- | --- | --- | --- |
+| TrainingTimesLastYear | 0 | 6 | 7 |
+
+### Decision 20: Treat PerformanceRating and PercentSalaryHike as moving together
+
+- **Found:** Salary hike and performance rating are almost the same measure in this dataset. Every employee with a hike under 18 is rated Excellent (1,079 employees), and every employee with a hike of 21 to 25 is rated Outstanding (171 employees). Only the 18 to 20 band holds both ratings (Table 4.20).
+- **Decided:** Both columns stay in the clean table. Business question 9 reports them separately and states that they overlap. No business question treats a salary hike effect as separate from a rating effect, except inside the 18 to 20 band.
+- **Why:** A rating and a salary increase that always go together cannot be separated by the data, so comparing them as if they were independent would count one pattern twice.
+- **Limit:** The data does not show whether the rating decided the increase or the other way round. The documented meaning of two independent columns fails for this dataset, as it did for PerformanceRating in Decision 7.
+
+Table 4.20: Salary hike band by performance rating (employees)
+
+| Salary hike band | Excellent | Outstanding | Total |
+| --- | --- | --- | --- |
+| 11 to 12 | 408 | 0 | 408 |
+| 13 to 14 | 410 | 0 | 410 |
+| 15 to 17 | 261 | 0 | 261 |
+| 18 to 20 | 165 | 55 | 220 |
+| 21 to 25 | 0 | 171 | 171 |
+| Total | 1,244 | 226 | 1,470 |

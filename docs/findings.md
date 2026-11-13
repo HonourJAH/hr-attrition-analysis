@@ -812,3 +812,131 @@ For an HR manager, a low job involvement or work-life balance rating is the stro
 - The ratings come from the dataset documentation as codes. The labels were not recorded in the file itself (Decisions 12 and 13).
 - The data has no date, so it cannot show whether the pattern changed over time.
 - The employees are fictional, so the pattern may not match any real organisation.
+
+## Business question 9: Do performance rating, salary increase and training go with attrition, and does this hold within overtime?
+
+### Findings
+
+The performance rating in this dataset has only two values. The documented scale runs from 1 to 4, but every employee is rated Excellent (3) or Outstanding (4), so the comparison is between two groups at the top of the scale and cannot show whether poor performers leave more often (Decision 7). Salary increases are grouped into bands fixed before any attrition rate was looked at (Decision 19). Shares in the tables are rounded to one decimal place.
+
+Table 9.1: Attrition by performance rating
+
+| Performance rating | Employees | Share of employees | Left | Share of all leavers | Attrition rate |
+| --- | --- | --- | --- | --- | --- |
+| Excellent | 1,244 | 84.6% | 200 | 84.4% | 16.1% |
+| Outstanding | 226 | 15.4% | 37 | 15.6% | 16.4% |
+| Total | 1,470 | 100.0% | 237 | 100.0% | 16.1% |
+
+Table 9.2: Attrition by performance rating within overtime
+
+| Performance rating | Employees without overtime | Left | Attrition rate | Employees with overtime | Left | Attrition rate |
+| --- | --- | --- | --- | --- | --- | --- |
+| Excellent | 893 | 96 | 10.8% | 351 | 104 | 29.6% |
+| Outstanding | 161 | 14 | 8.7% | 65 | 23 | 35.4% |
+| Total | 1,054 | 110 | 10.4% | 416 | 127 | 30.5% |
+
+Table 9.3: Attrition by salary increase, overall and within overtime
+
+| Salary increase (percent) | Employees | Left | Attrition rate | Employees without overtime | Left | Attrition rate | Employees with overtime | Left | Attrition rate |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 11 to 12 | 408 | 74 | 18.1% | 288 | 37 | 12.8% | 120 | 37 | 30.8% |
+| 13 to 14 | 410 | 58 | 14.1% | 289 | 22 | 7.6% | 121 | 36 | 29.8% |
+| 15 to 17 | 261 | 46 | 17.6% | 201 | 29 | 14.4% | 60 | 17 | 28.3% |
+| 18 to 20 | 220 | 29 | 13.2% | 155 | 12 | 7.7% | 65 | 17 | 26.2% |
+| 21 to 25 | 171 | 30 | 17.5% | 121 | 10 | 8.3% | 50 | 20 | 40.0% |
+| Total | 1,470 | 237 | 16.1% | 1,054 | 110 | 10.4% | 416 | 127 | 30.5% |
+
+Table 9.4: Attrition by the number of training sessions last year, overall and within overtime
+
+| Training sessions | Employees | Left | Attrition rate | Employees without overtime | Left | Attrition rate | Employees with overtime | Left | Attrition rate |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 0 | 54 | 15 | 27.8% | 36 | 6 | 16.7% | 18 | 9 | 50.0% |
+| 1 | 71 | 9 | 12.7% | 54 | 4 | 7.4% | 17 | 5 | 29.4% |
+| 2 | 547 | 98 | 17.9% | 370 | 40 | 10.8% | 177 | 58 | 32.8% |
+| 3 | 491 | 69 | 14.1% | 360 | 38 | 10.6% | 131 | 31 | 23.7% |
+| 4 | 123 | 26 | 21.1% | 81 | 12 | 14.8% | 42 | 14 | 33.3% |
+| 5 | 119 | 14 | 11.8% | 98 | 7 | 7.1% | 21 | 7 | 33.3% |
+| 6 | 65 | 6 | 9.2% | 55 | 3 | 5.5% | 10 | 3 | 30.0% |
+| Total | 1,470 | 237 | 16.1% | 1,054 | 110 | 10.4% | 416 | 127 | 30.5% |
+
+Table 9.5: No training compared with one or more training sessions
+
+| Overtime | Training sessions | Employees | Left | Attrition rate |
+| --- | --- | --- | --- | --- |
+| All employees | 0 | 54 | 15 | 27.8% |
+| All employees | 1 to 6 | 1,416 | 222 | 15.7% |
+| Without overtime | 0 | 36 | 6 | 16.7% |
+| Without overtime | 1 to 6 | 1,018 | 104 | 10.2% |
+| With overtime | 0 | 18 | 9 | 50.0% |
+| With overtime | 1 to 6 | 398 | 118 | 29.6% |
+
+Table 9.6: Salary increase band by performance rating
+
+| Salary increase (percent) | Rating | Employees | Left | Attrition rate |
+| --- | --- | --- | --- | --- |
+| 11 to 12 | Excellent | 408 | 74 | 18.1% |
+| 13 to 14 | Excellent | 410 | 58 | 14.1% |
+| 15 to 17 | Excellent | 261 | 46 | 17.6% |
+| 18 to 20 | Excellent | 165 | 22 | 13.3% |
+| 18 to 20 | Outstanding | 55 | 7 | 12.7% |
+| 21 to 25 | Outstanding | 171 | 30 | 17.5% |
+| Total | | 1,470 | 237 | 16.1% |
+
+Table 9.7: Attrition by salary increase band within each job level
+
+| Job level | Salary increase (percent) | Employees | Left | Attrition rate |
+| --- | --- | --- | --- | --- |
+| 1 | 11 to 12 | 140 | 41 | 29.3% |
+| 1 | 13 to 14 | 161 | 39 | 24.2% |
+| 1 | 15 to 17 | 91 | 25 | 27.5% |
+| 1 | 18 to 20 | 86 | 16 | 18.6% |
+| 1 | 21 to 25 | 65 | 22 | 33.8% |
+| 2 | 11 to 12 | 149 | 14 | 9.4% |
+| 2 | 13 to 14 | 142 | 11 | 7.7% |
+| 2 | 15 to 17 | 104 | 12 | 11.5% |
+| 2 | 18 to 20 | 83 | 10 | 12.0% |
+| 2 | 21 to 25 | 56 | 5 | 8.9% |
+| 3 | 11 to 12 | 64 | 14 | 21.9% |
+| 3 | 13 to 14 | 56 | 7 | 12.5% |
+| 3 | 15 to 17 | 37 | 5 | 13.5% |
+| 3 | 18 to 20 | 34 | 3 | 8.8% |
+| 3 | 21 to 25 | 27 | 3 | 11.1% |
+| 4 | 11 to 12 | 31 | 3 | 9.7% |
+| 4 | 13 to 14 | 29 | 0 | 0.0% |
+| 4 | 15 to 17 | 18 | 2 | 11.1% |
+| 4 | 18 to 20 | 12 | 0 | 0.0% |
+| 4 | 21 to 25 | 16 | 0 | 0.0% |
+| 5 | 11 to 12 | 24 | 2 | 8.3% |
+| 5 | 13 to 14 | 22 | 1 | 4.5% |
+| 5 | 15 to 17 | 11 | 2 | 18.2% |
+| 5 | 18 to 20 | 5 | 0 | 0.0% |
+| 5 | 21 to 25 | 7 | 0 | 0.0% |
+| Total | | 1,470 | 237 | 16.1% |
+
+- Performance rating does not clearly go with attrition. Employees rated Outstanding left at 16.4% and those rated Excellent at 16.1%, and Outstanding employees were 15.4% of the workforce and 15.6% of the leavers (Table 9.1).
+- Within overtime, the direction is mixed. Excellent employees had the higher rate without overtime (10.8% against 8.7%), and Outstanding employees had the higher rate with overtime (35.4% against 29.6%). The Outstanding groups are small (161 and 65 employees), so the data cannot tell whether the two ratings really differ (Table 9.2).
+- The size of the salary increase does not show a clear pattern either. The five bands were between 13.2% and 18.1%, and the highest band (21 to 25, 17.5%) was close to the lowest (11 to 12, 18.1%). The rate did not rise or fall from one band to the next (Table 9.3).
+- The same holds within overtime. The rates were between 7.6% and 14.4% without overtime and between 26.2% and 40.0% with overtime. The highest, 40.0% for an increase of 21 to 25 with overtime, rests on 50 employees, so the data cannot tell whether it reflects a real difference (Table 9.3).
+- Salary increase and performance rating move together in this dataset. All 1,079 employees with an increase under 18 percent were rated Excellent, and all 171 with an increase of 21 to 25 percent were rated Outstanding. Only the 18 to 20 band holds both ratings, and the rates there were similar (13.3% for Excellent and 12.7% for Outstanding). The data therefore cannot separate a salary increase effect from a rating effect (Table 9.6).
+- The salary increase pattern is not explained by job level. Within level 1 the rate was 29.3%, 24.2%, 27.5%, 18.6% and 33.8% across the five bands, with no steady direction. Within level 2 the rates stayed between 7.7% and 12.0%. Level 3 was higher in its lowest band (21.9% of 64 employees) than in the others, but without a steady direction. Levels 4 and 5 are too small to read (Table 9.7).
+- Training does not show a steady pattern. The rate was 27.8% for 0 sessions, then 12.7%, 17.9%, 14.1%, 21.1%, 11.8% and 9.2% for 1 to 6 sessions, with no consistent rise or fall (Table 9.4).
+- The one exception is no training at all. Employees with 0 training sessions left at 27.8%, against 15.7% for those with 1 to 6 sessions. The direction is the same within overtime: 16.7% against 10.2% without overtime, and 50.0% against 29.6% with overtime (Table 9.5).
+- The group with no training is small: 54 employees, of whom 36 do not work overtime and 18 do. The size of the gap is therefore uncertain, but the direction is the same in all three comparisons, so it is a weak signal and not a clear result (Table 9.5).
+
+### What this means
+
+Neither the performance rating, nor the size of the salary increase, nor the amount of training stands out as a factor that goes with attrition in this dataset. The only hint is that employees with no training at all left more often, and this rests on a small group.
+
+This does not show that raising pay or training would make no difference. It shows that, among employees in this data, those with larger increases or more training did not leave less often. Other factors in this report, such as overtime, job level and time at the company, go with much larger differences, and an HR manager would find them a better place to start.
+
+### Limitations
+
+- These are associations. The data does not show why employees left, and it does not show what would happen if an increase or training were changed.
+- The performance rating has only two values, both at the top of the scale, so the question cannot compare poor and good performers (Decision 7).
+- Salary increase and performance rating move together, so the data cannot separate them (Decision 20).
+- Training was not tested within job level, and time at the company and pay are not taken into account in this question.
+- The training column counts sessions. The data does not say what kind of training they were or whether they were completed.
+- The salary increase bands were fixed before any attrition rate was looked at (Decision 19), but different band edges could give different group results.
+- Several groups are small, as noted above.
+- The data has no date, so it cannot show whether the pattern changed over time.
+- The employees are fictional, so the pattern may not match any real organisation.
