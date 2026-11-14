@@ -108,5 +108,5 @@ The attrition_dashboard sheet shows four PivotCharts (time at the company, numbe
 - Michael Onojah, Electrical and Electronics Engineering graduate (Federal University of Technology Akure, 2025), moving into entry-level data analytics.
 - Skills: SQL, Excel, Power BI and Python.
 
-- GitHub: HonourJAH
+- GitHub: [HonourJAH](https://github.com/HonourJAH)
 - LinkedIn: linkedin.com/in/friday-onojah-9a5698219
