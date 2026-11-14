@@ -1,5 +1,5 @@
 # Raw and exported data files (never committed)
-data/
+data/raw/
 *.csv
 *.parquet
 

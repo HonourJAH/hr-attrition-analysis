@@ -62,6 +62,8 @@ What this means for an HR manager: leaving is concentrated in specific roles, in
 
 The attrition_dashboard sheet shows four PivotCharts (time at the company, number of risk factors, job role and overtime) and three headline figures (employees, leavers and attrition rate). Five slicers (Department, JobLevel, OverTime, BusinessTravel and TenureBand) filter every chart and figure together. The headline figures were checked against the earlier tables for several slicer settings.
 
+![Attrition dashboard](images/dashboard.png)
+
 ## What I learned
 
 - **Test every finding within subgroups.** The department rates hid large differences between roles, and overtime, pay and age patterns each changed once job level or time at the company was held the same.
@@ -71,16 +73,18 @@ The attrition_dashboard sheet shows four PivotCharts (time at the company, numbe
 
 ## Repository structure
 
-    hr-attrition-analysis
-        README.md
-        .gitignore
-        docs
-            decision-log.md
-            findings.md
-        workbook
-            hr_attrition_analysis.xlsx
-        data
-            raw (not committed; place the downloaded CSV here)
+    hr-attrition-analysis/
+    ├── data/
+    │   └── README.md
+    ├── docs/
+    │   ├── decision-log.md
+    │   └── findings.md
+    ├── images/
+    │   └── dashboard.png
+    ├── workbook/
+    │   └── hr_attrition_analysis.xlsx
+    ├── .gitignore
+    └── README.md
 
 ## Skills shown
 
@@ -101,7 +105,8 @@ The attrition_dashboard sheet shows four PivotCharts (time at the company, numbe
 
 ## About me
 
-Michael Onojah, Electrical and Electronics Engineering graduate (Federal University of Technology Akure, 2025), moving into entry-level data analytics. Skills: SQL, Excel, Power BI and Python.
+- Michael Onojah, Electrical and Electronics Engineering graduate (Federal University of Technology Akure, 2025), moving into entry-level data analytics.
+- Skills: SQL, Excel, Power BI and Python.
 
 - GitHub: HonourJAH
 - LinkedIn: linkedin.com/in/friday-onojah-9a5698219
