@@ -52,7 +52,7 @@ Each question has a full write-up with tables, interpretation and limitations in
 | 5 | How do age and marital status relate to attrition? | Employees under 35 left at 23.0% against 10.6% for those 35 and over. Single employees left at 25.5%, mostly among the younger ages. |
 | 6 | Does a long gap since the last promotion go with higher attrition? | No steady link. Among employees with 5 or more years at the company, a gap of 6 to 10 years went with 18.1% against 9.3% for other gaps. |
 | 7 | Do business travel and distance from home matter? | Frequent travellers left at 24.9% against 8.0% for non-travellers, and this holds within overtime and department. Distance is a weaker pattern. |
-| 8 | Which rating scale shows the biggest gap between low and high ratings? | Job involvement: 33.7% for the lowest rating against 13.6% for the two highest, a gap of 20.1 percentage points. |
+| 8 | Which rating scale shows the biggest gap between low and high ratings? | Job involvement: the lowest rating had an attrition rate of 33.7% (28 of 83 employees), against 13.6% (138 of 1,012 employees) for the High and Very High ratings combined, a gap of 20.1 percentage points. Tables 8.1 and 8.2 in docs/findings.md. |
 | 9 | Do performance rating, salary increase and training matter? | No clear pattern. Employees with no training at all left at 27.8% (54 employees), a weak signal on a small group. |
 | 10 | Which combination of factors has the highest attrition? | Employees with 3 or more of five risk factors left at 65.0% (100 employees). Among groups of at least 30 employees, job level 1 with overtime was highest at 38.8%. |
 
