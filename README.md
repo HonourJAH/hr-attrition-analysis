@@ -4,6 +4,8 @@ An Excel analysis of employee attrition in the IBM HR Analytics dataset (1,470 f
 
 This is project 4 of my data analytics portfolio. The earlier projects use SQL (retail sales and Czech bank loans) and Python (bank marketing). This one is built entirely in Excel, to show Power Query, XLOOKUP, PivotTables, PivotCharts and slicers.
 
+For a manager-ready version of the findings, see [the summary](reports/manager_summary.pdf) and [the slide deck](reports/manager_deck.pdf).
+
 ## The question
 
 Which employees leave, and what do they have in common? An HR manager who knows where leaving is concentrated can look at the right jobs, groups and working conditions first.
