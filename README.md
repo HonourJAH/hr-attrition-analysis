@@ -83,6 +83,11 @@ The attrition_dashboard sheet shows four PivotCharts (time at the company, numbe
     │   └── findings.md
     ├── images/
     │   └── dashboard.png
+    ├── reports/
+    │   ├── manager_deck.pdf
+    │   ├── manager_deck.pptx
+    │   ├── manager_summary.docx
+    │   └── manager_summary.pdf
     ├── workbook/
     │   └── hr_attrition_analysis.xlsx
     ├── .gitignore
